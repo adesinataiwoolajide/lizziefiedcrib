@@ -1,0 +1,963 @@
+* {
+	margin: 0px;
+	padding: 0px;
+    font-family: Geneva;
+    border: border-box;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.header {
+	padding-top: 8px;
+	padding-bottom: 40px;
+	width: 100%;
+	background-color: #eeeeee;
+}
+
+.header button {
+	padding: 3px 20px;
+	color: white;
+	border: none;
+	float: right;
+	background-color: black;
+	margin-right: 20px;
+}
+
+.nav ul li {
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+}
+
+.nav ul {
+	cursor: pointer;
+	padding-top: 70px;
+	margin-left: 10px;
+}
+
+.nav {
+	background-color: black;
+    padding-bottom: 515px;
+}
+
+.mainBody {
+   background-color: white;
+   padding-left: 0px;
+   padding-right: 0px;
+}
+
+
+.widget {
+	background-color: #383c6b;
+	width: 270px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 50px !important;
+	color: white;
+	margin-bottom: 30px;
+	border-radius: 5px;
+}
+
+.widget:hover {
+	cursor: pointer;
+	background-color: green;
+}
+
+.widget p {
+	text-align: center;
+}
+
+.widgetContainer {
+    margin-top: 60px;
+	flex-wrap: wrap;
+}
+
+#navTitle {
+	color: orange;
+}
+
+#navHome {
+	background-color: green;
+	border-radius: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#owner {
+	float: right;
+	margin-right: 20px;
+	color: white;
+	border-bottom: 1px solid black;
+}
+
+.propertyForm {
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 10px;
+	background-color: white;
+	padding-top: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.property-Document input {
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.property-Document p {
+	padding-left: 20px;
+}
+
+.facilities input {
+	padding: 20px;
+	margin-left: 10px;
+}
+
+.facilities p {
+	padding-left: 20px;
+}
+
+.Space {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	background-color: white;
+}
+
+.bedroom {
+	width: 40%;
+	margin-left: 10px;
+}
+
+.bedroom input {
+	width: 100%;
+	border: 1px solid #eeeeee;
+	padding: 7px;
+	margin-bottom: 5px;
+}
+
+.bedroomQuantity p{
+	margin-left: 10px;
+}
+
+.noofunits {
+	width: 40%;
+	margin-left: 10px;
+}
+
+.noofunits input {
+	width: 100%;
+	border: 1px solid #eeeeee;
+	padding: 7px;
+}
+.units p {
+	margin-left: 10px;
+}
+
+.price input {
+   width: 40%;
+   margin-left: 10px;
+   margin-bottom: 10px;
+   padding: 7px;
+   border: 1px solid #eeeeee;
+}
+
+.price p {
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-bottom: 0px;
+}
+
+#category, #type {
+	width: 80%;
+	height: 40px;
+	padding: 8px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	border: 1px solid #eeeeee;
+	background-color: #eeeeee;
+	margin-left: 10%;
+}
+
+.size {
+	width: 100px;
+	margin-left: 10px;
+}
+
+.size input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #eeeeee;
+}
+#measure {
+	border: 1px solid #eeeeee;
+	background-color: white;
+	padding: 8px;
+	margin-left: 10px;
+	height: 40px;
+}
+
+#theStates, #locaGv {
+	height: 40px;
+	margin-left: 40px !important;
+}
+
+.theTitle {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    width: 90%;
+    margin-left: 5%;
+    color: default;
+}
+
+.fac {
+	padding-top: 20px;
+}
+
+.propertyForm button {
+	padding: 4px 30px;
+	border-radius: 5px;
+	background-color: green;
+	color: white;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+
+.propertyForm input {
+	background-color: #eeeeee;
+}
+
+#firstStage {
+	display: none;
+}
+
+.propertyForm label {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	background-color: green;
+	color: white;
+}
+
+#local {
+	padding: 7px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	border: 1px solid #eeeeee;
+}
+
+.localhead {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid purple;
+	color: black;
+	width: 90%;
+	margin-left: 5%;
+}
+
+.add {
+	padding: 10px;
+	width: 90%;
+	margin-top: 10px;
+	margin-left: 5%;
+	border: 1px solid #eeeeee;
+}
+
+.bot {
+	margin-bottom: 10px;
+}
+
+#textarea {
+	width: 90%;
+	padding: 10px;
+	margin-left: 5%;
+	height: 100px;
+	margin-bottom: 30px;
+	border: 1px solid #eeeeee;
+}
+
+.pictures {
+	border: 1px solid lightgreen;
+	padding: 5px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	background-color: white;
+	width: 90%;
+}
+
+h6 {
+	text-align: center;
+	color: black;
+	margin-bottom: 0px;
+}
+
+#lastpicture {
+	margin-bottom: 30px;
+	margin-top: none;
+}
+
+.stage {
+	background-color: green;
+	color: white;
+	text-align: center;
+	padding-top: 15px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	border: 6px solid orange;
+	float: right;
+	margin-right: 10px;
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {border: 6px solid green;}
+    25%  {background-color: yellow;}
+    50%  {width: 35px; height: 35px;}
+    100% {background-color: purple; color: white;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {border: 3px solid orange;}
+    25%  {background-color: green;}
+    50%  {width: 35px; height: 35px; padding-top: 4px; background-color: purple;}
+    100% {background-color: green;}
+}
+
+#theStates, #locaGv {
+	margin-left: 20px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #eeeeee;
+}
+
+.listProperty {
+	background-color: rgba(0,0,0, .5);
+	position: fixed;
+	top: 0px;
+	z-index: 3;
+	left: 0px;
+	width: 100%;
+	overflow: scroll;
+    max-height: 100%;
+    display: none;
+}
+
+.closeForm {
+	color: white;
+	font-size: 40px;
+	margin-top: 10px;
+	margin-left: 10px;
+	position: fixed;
+}
+
+.closeForm:hover {
+    color: orange;
+}
+
+.size-of-property {
+	margin-left: 9%;
+}
+
+.size-of-property input {
+	border-radius: 5px;
+}
+
+.updateAgentRecords {
+   position: fixed;
+   z-index: 5;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   background-color: rgba(0,0,0, .6);
+   padding-bottom: 70px;
+   display: none;
+}
+
+.updateAgentRecords form {
+	background-color: white;
+	width: 50%;
+	margin-left: 25%;
+	padding-bottom: 50px;
+	margin-top: 50px;
+}
+
+.updateAgentRecords form input {
+	padding: 10px;
+	width: 80%;
+	border: none;
+	background-color: #fafafa;
+	margin-bottom: 10px;
+	margin-left: 10%;
+}
+
+.updateAgentRecords form select {
+	background-color: #fafafa;
+	height: 40px;
+	color: black;
+}
+
+.updateAgentRecords form label {
+	background-color: white;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	color: green;
+}
+
+.updateAgentRecords form button {
+    margin-right: 10%;
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    float: right;
+    color: white;
+    padding: 5px 20px;
+    margin-bottom: 50px;
+}
+
+#useState {
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+
+.eventModal {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 7;
+	width: 25%;
+	background-color: green;
+	height: 150px;
+	display: none;
+}
+
+.eventModal p {
+	text-align: center;
+	color: white;
+	margin-top: 50px;
+	background-color: transparent;
+	color: white;
+}
+
+.aboutAgent {
+	position: fixed;
+	z-index: 7;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, .5);
+	padding-top: 10px;
+	padding-bottom: 50px;
+	overflow: scroll;
+	display: none;
+}
+
+.aboutAgent .cover {
+	/*position: fixed;*/
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-height: 500px;
+    /*overflow: scroll;*/
+}
+.aboutAgent form {
+	width: 100%;
+	background-color: white;
+}
+
+.aboutAgent label {
+	color: green;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+}
+
+.aboutAgent form button {
+	color: white;
+	background-color: green;
+	font-size: 14px;
+	padding: 4px 30px;
+	margin-top: 10px;
+	border: none;
+	margin-left: 43%;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+.aboutAgent form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #fafafa;
+    color: black;
+    border: none;
+}
+
+.aboutAgent form textarea {
+	width: 80%;
+	background-color: #fafafa;
+	color: black;
+	padding: 10px;
+	margin-left: 10%;
+	height: 300px;
+	border: none;
+}
+
+.plusSign {
+	font-size: 50px;
+	color: purple;
+	background-color: white;
+}
+
+#signout {
+	background-color: maroon;
+}
+
+#shortProfile{
+    width: 270px;
+    background-color: cyan;
+    padding-top: 10px;
+    border-right: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#agentImage {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: auto;
+	background-color: white;
+}
+
+#tele, #local {
+	text-align: center;
+}
+
+.ratings {
+	margin-left: 50px;
+}
+
+.ratings i {
+	font-size: 30px;
+	color: green;
+}
+
+.loader {
+   position: fixed;
+   top: 0px;
+   z-index: 1000;
+   background-color: rgba(0,0,0, .8);
+   height: 100%;
+   width: 100%;
+   display: none;
+}
+
+.listedProps {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: scroll;
+    background-color: rgba(0,0,0, .5);
+    z-index: 7;
+    display: none;
+    height: 100%;
+}
+
+#editProperty {
+	position: fixed;
+	padding: 4px 20px;
+	color: white;
+	background-color: #383c6b;
+	z-index: 8;
+	right: 10px;
+	top: 200px;
+	border: none;
+	border-radius: 5px;
+}
+
+.editProperty:hover {
+	background-color: green;
+}
+
+#price_search {
+	margin-bottom: 10px;
+}
+
+
+.myProps {
+    width: 86%;
+    margin-left: 7%;
+    background-color: white;
+}
+
+/*.propRow {
+	background-color: white;
+}*/
+
+.myMails {
+	position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: scroll;
+    background-color: rgba(0,0,0, .5);
+    z-index: 7;
+    display: none;
+    height: 100%;
+}
+
+
+.eachMails {
+	width: 80%;
+    margin-left: 10%;
+    background-color: white;
+}
+
+.contact_leads {
+	position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: scroll;
+    background-color: rgba(0,0,0, .5);
+    z-index: 8;
+    height: 100%;
+    display: none;
+}
+
+.myContacts {
+	width: 50%;
+    margin-left: 25%;
+    background-color: white;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+
+.contact_modal {
+	position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: scroll;
+    background-color: rgba(0,0,0, .5);
+    z-index: 7;
+    height: 100%;
+    display: none;
+}
+
+.contact_content {
+	width: 80%;
+    margin-left: 10%;
+    background-color: white;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+
+.contact_add_contact {
+	border-bottom: 1px solid #383c6b;
+}
+
+.contact_modal button {
+	background-color: #383c6b;
+	color: white;
+	font-size: 14px;
+	border-radius: 5px;
+	border: none;
+	padding: 4px 20px;
+	/*float: right;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10%;
+	/*clear: both;*/
+}
+
+.contact_content button:hover {
+	background-color: green;
+}
+
+.myContacts input {
+	width: 80%;
+	padding: 10px;
+	margin-left: 10%;
+	background-color: #fafafa;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border: none;
+}
+
+.myContacts button {
+	padding: 4px 30px;
+	background-color: green;
+	color: white;
+	font-size: 14px;
+	border-radius: 5px;
+	border: none;
+    margin-right: 10%;
+	float: right;
+}
+
+.myContacts select {
+	color: black;
+	width: 80%;
+	height: 50px;
+	background-color: #fafafa;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border: none;
+	margin-left: 10%;
+}
+
+.myContacts label {
+	color: green;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	padding-top: 40px;
+}
+
+#theLoader {
+	width: 150px;
+	height: 150px;
+	background-color: transparent;
+	border: 10px solid white;
+	border-radius: 50%;
+	border-left: 10px solid green;
+	margin: auto;
+	margin-top: 150px;
+	-webkit-animation-name: rotation;
+	-ms-animation-name: rotation; /* Safari 4.0 - 8.0 */
+	animation-name: rotation;
+    animation-duration: .1s;
+    -webkit-animation-duration: .1s; /* Safari */
+    -ms-animation-duration: .1s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation {
+    0%   {transform: rotate(90deg);}
+    25%  {transform: rotate(180deg);}
+    50%  {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes rotation {
+    0%   {transform: rotate(90deg);}
+    25%  {transform: rotate(180deg);}
+    50%  {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@media only screen and (max-width: 768px) {
+    .size-of-property {
+    	margin-left: 5px;
+    }
+
+    .closeForm {
+    	color: black;
+    }
+
+    .propertyform {
+    	width: 90%;
+    	margin-left: 5%;
+    }
+}
+
+.contact_form {
+	width: 100%;
+	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.contact_form input {
+    padding: 10px;
+    background-color: #fafafa;
+    margin-left: 5%;
+    border: none;
+    margin-bottom: 10px;
+    width: 95%;
+    font-size: 14px;
+}
+
+.props {
+	flex-wrap: wrap;
+	height: 700px;
+	overflow: scroll;
+}
+
+.a_property {
+     width: 300px;
+     margin-left: 5px;
+     /*margin-top: 20px;*/
+     border: 1px solid white;
+     border-radius: 5px;
+     background-color: #eeeeee;
+     cursor: pointer;
+     max-height: 400px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.a_property:hover {
+	border: 1px solid green;
+	color: green;
+}
+
+.a_property ul li {
+	list-style-type: none;
+	text-align: center;
+	padding: 5px;
+}
+
+.cover_pix {
+	width: 100%;
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+}
+
+.propFilter {
+	background-color: white;
+	width: 86%;
+	margin-left: 7%;
+}
+
+.propFilter input{
+	margin-top: 10px;
+    padding: 8px;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 5px;
+    color: default;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.propFilter button {
+	padding: 4px 20px;
+	color: white;
+	background-color: green;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 20px;
+	border: none;
+}
+
+.askQuestion {
+	position: absolute;
+	height: 100%;
+	z-index: 7;
+	top: 0;
+	width: 100%;
+	display: none;
+	background-color: rgba(0,0,0, .5);
+}
+
+.askQuestion div {
+	width: 30%;
+	background-color: white;
+	border-radius: 5px;
+	padding-top: 50px;
+	padding-bottom: 70px;
+	margin: auto;
+    margin-top: 200px;
+}
+
+.askQuestion button{
+    color: white;
+    background-color: #383c6b;
+    border: none;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+    margin-left: 32%;
+    border-radius: 5px;
+}
+
+.askQuestion button:hover {
+	background-color: green;
+}
+
+.upDateProps {
+	display: none;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0, .5);
+	height: 100%;
+}
+
+.editModal {
+	display: none;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0, .5);
+	height: 100%;
+	z-index: 7;
+}
+
+.prop_param {
+	width: 50%;
+	background-color: white;
+	border-radius: 5px;
+	/*padding-top: 50px;*/
+	margin: auto;
+	padding-left: 10px;
+}
+
+.prop_param button {
+	color: white;
+    background-color: #383c6b;
+    border: none;
+    padding: 2px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.prop_param button:hover {
+	background-color: maroon;
+}
+
+.prop_param p {
+	margin-bottom: 0px;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+/*.contact_form button {
+	padding: 4px 20px;
+	color: white;
+}*/

@@ -1,0 +1,328 @@
+* {
+	margin: 0px;
+	padding: 0px;
+    font-family: Geneva;
+    border: border-box;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.welcome_modal {
+	background-color: rgba(0,0,0, .1);
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.welcome_modal ul li {
+	background-color: white;
+	border-radius: 5px;
+	color: black;
+	display: inline-flex;
+	margin-left: 10px;
+	border: none;
+	padding: 4px 20px;
+	cursor: pointer;
+}
+
+.welcome_modal ul {
+	margin-left: 9%;
+	margin-top: 150px;
+}
+
+.welcome_modal form {
+	background-color: transparent;
+	width: 80%;
+	margin-left: 10%;
+}
+
+#labelForForm {
+	margin-top: 10px;
+}
+
+.welcome_modal option {
+	color: black;
+}
+
+.welcome_modal select {
+	color: white;
+	height: 50px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	background-color: transparent;
+	width: 100%;
+	border: 1px solid orange;
+}
+
+.welcome_modal option {
+	color: black;
+}
+
+.welcome_modal button {
+	background-color: green;
+	color: white;
+	padding: 2px 30px;
+	float: right;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.welcome_modal label {
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding: 10px;
+	background-color: transparent;
+}
+
+.banner {
+	background-position: center;
+	background-size: cover;
+}
+
+.banner h2 {
+	text-align: center;
+	color: white;
+	background-color: transparent;
+}
+
+.bannerContent {
+	background-color: rgba(0,0,0, .6);
+	padding-top: 150px;
+	padding-bottom: 300px;
+	width: 100%;
+}
+
+.theFooter {
+	background-color: black;
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.theFooter p {
+    text-align: center;
+}
+
+.parentComp {
+	background-color: white;
+	width: 300px;
+	margin-left: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.parentComp span i {
+	font-size: 16px;
+	color: black;
+	background-color: transparent;
+}
+
+.bottomComp {
+	width: 100%;
+	background-color: white;
+}
+
+.topComp {
+	width: 100%;
+	padding-top: 10px;
+	background-color: white;
+}
+
+#agentPicture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 10px;
+    background-color: orange;
+}
+
+#tele, #address, #local, #agent_state {
+   padding: 0px;
+   margin-bottom: 2px;
+
+}
+
+#local {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+
+#agentName {
+	text-align: center;
+	margin-bottom: 2px;
+	font-size: 22px;
+}
+
+#tele {
+	margin-top: 10px;
+	text-align: center;
+    padding-top: 10px;
+	border-top: 10px solid green;
+}
+
+.agentsAndProperties {
+	max-width: 100%;
+}
+
+.theAgents {
+	padding-top: 50px;
+	background-color: #ecf5f5;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+}
+
+.someProps {
+	background-color: #ecf5f5;
+}
+
+.ratings {
+	width: 100%;
+	padding-left: 70px;
+	margin-bottom: 30px;
+}
+
+.ratings i {
+	color: green;
+	font-size: 28px;
+	background-color: transparent;
+}
+
+.signup_form {
+	z-index: 3;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0, .7);
+	height: 800px;
+	display: none;
+	width: 100%;
+}
+
+.login_form {
+	z-index: 4;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0, .7);
+	height: 800px;
+	display: none;
+	width: 100%;
+}
+
+.fa-window-close {
+	color: white;
+	font-size: 40px;
+	padding: 10px;
+	background-color: transparent;
+}
+
+.login form {
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 5%;
+    border: 1px solid #eeeeee;
+    background-color: #fafafa;
+    margin-top: 70px;
+    padding-bottom: 90px;
+    
+}
+
+.login input {
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #eeeeee;
+	margin-bottom: 5px;
+	font-size: 15px;
+	margin-left: 4%;
+}
+
+.login button {
+	padding: 6px 30px;
+	float: right;
+	border: none;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-right: 6%;
+	font-size: 14px;
+}
+
+.login p {
+	padding: 50px 10px;
+	color: default;
+	text-align: center;
+}
+
+.login {
+	padding-bottom: 70px;
+}
+
+.description p {
+	text-align: center;
+}
+
+.fa-phone, .fa-mountain {
+	padding-right: 10px;
+	color: green;
+}
+
+#theLoader {
+	width: 150px;
+	height: 150px;
+	background-color: transparent;
+	border: 10px solid white;
+	border-radius: 50%;
+	border-left: 10px solid green;
+	margin: auto;
+	margin-top: 150px;
+	-webkit-animation-name: rotation;
+	-ms-animation-name: rotation; /* Safari 4.0 - 8.0 */
+	animation-name: rotation;
+    animation-duration: .1s;
+    -webkit-animation-duration: .1s; /* Safari */
+    -ms-animation-duration: .1s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation {
+    0%   {transform: rotate(90deg);}
+    25%  {transform: rotate(180deg);}
+    50%  {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes rotation {
+    0%   {transform: rotate(90deg);}
+    25%  {transform: rotate(180deg);}
+    50%  {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.loader {
+   position: fixed;
+   top: 0px;
+   z-index: 1000;
+   background-color: rgba(0,0,0, .8);
+   height: 100%;
+   width: 100%;
+   display: none;
+}
