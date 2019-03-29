@@ -13,12 +13,13 @@
         <script src="{{ asset('js/jquery-3.2.1.min(first).js') }}" type='text/JavaScript'></script>
 
         <link href="{{ asset('/CSS/agentFinder.css') }}" rel="stylesheet" type="text/css">
-
+		<link href="{{ asset('CSS/taiwo.css') }}" rel="stylesheet" type="text/css" >
+		<script src="{{ asset('CSS/taiwo.js') }}"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         
 </head>
 <body>
-	   	     <div class="banner" style="background-image: url({{ asset('/storage/images/agentpix.jpg') }});">
+	   	     <div class="banner" style="background-image: url({{ asset('/storage/images/smartapartment.jpg') }});">
 	   	     	  <div class="bannerContent">
 
 	   	     	  	   <h2>Agent Finder</h2>
@@ -38,19 +39,21 @@
              </div>
 
 
-	   	     <div class="theFooter">
+	   	     {{-- <div class="theFooter">
 	   	     	<ul>
 	   	     		<li>About Us</li>
 	   	     		<li>Our Contacts</li>
 	   	     	</ul>
 	   	     	<p>Terms and Policies</p>
-	   	     </div>
+				</div> --}}
+				
 	   	     <div class="row welcome_modal">
 	   	     	<div class="col-md-6">
 					<ul>
 						<li onclick="gotoSignUp()">signup</li>
-						<li onclick="gotoLogin()">login</li>
-						<li onclick="gotoLogin()">Agent</li>
+						{{-- <li onclick="gotoLogin()">login</li> --}}
+						<li><a href=""> Back to Homepage</a></li>
+						
 					</ul>
 					
 					<label id="labelForForm"> Find An Agent </label>
@@ -129,7 +132,7 @@
 
 
 			
-	   	     <div class="row login_form">
+	   	     {{-- <div class="row login_form">
 	   	     	 <div class="col-md-12 login">
 	   	     	 	  <i class="fas fa-window-close" onclick="closeForm()"></i>
 	   	     	 	  <form class="findForm" encType="multipart/form-data" method="POST" action="{{URL::to('/')}}"> {{ csrf_field() }}
@@ -312,82 +315,7 @@
 										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
 									  	</div>
 									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
 									
-		   	     	 	  		</div><br>
-		   	     	 	  		<div class="card-group">
-									
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
-									<div class="card" style="width:200px">
-										<img class="img-fluid" src="{{asset('images/staff.jpg')}}" alt="Card image">
-										<div class="card-img-overlay">
-										    <h4 class="card-title" align="center" style="color: green">John Doe</h4>
-										    
-										    <p align="center"><a href="#" class="btn btn-primary" align="center">See Profile</a></p>
-									  	</div>
-									</div>
 		   	     	 	  		</div><br>
 		   	     	 	  		
 							</div>
@@ -421,7 +349,7 @@
 	   	     	 <div class="col-md-6 description">
 	   	     	 	 <p>something jdfain</p>
 	   	     	 </div>
-	   	     </div>
+	   	     </div> --}}
 
 	   	     <div class="row login_form">
 	   	     	 <div class="col-md-6 login">
@@ -464,7 +392,7 @@
 	   	     	 	 <p>something</p>
 	   	     	 </div>
 	   	     </div>
-
+				@include('footer')
 	   	<div class="loader">
            <div id="theLoader"></div>
         </div>

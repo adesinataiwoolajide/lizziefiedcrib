@@ -453,52 +453,55 @@
 	</div>
 	<div class="" align="center">
         <section class="our-webcoderskull padding-lg col-lg-12" style="width=:1200px; margin-left=:-50px;">
-            <p>Agent Property Details</p>
+            
 			<div class="container">
                 
 				@include('message');
-				
+				@if(count($seePro) ==0)
+					<h2><p style="color: red" a;igh="center">No Property is Found For This Agent</p></h2>
+				@else
+					<p>Agent Property Details</p>
 					<div class="container-fluid">
 						<h2>Please Kindly Preview Our Property Below </h2>
 						<div class="row">
 							<div class="col-12">
 								<div class="table-responsive checkout-right animated wow slideInUp " data-wow-delay=".5s">
 									<table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>S/N</th>
-                                                <th>Cover Image</th>
-                                                <th>Category</th>
-                                                <th>Title</th>
-                                                <th>Size</th>
-                                                <th>Measure</th>
-                                                <th>Fed C of O</th>
-                                                <th>State C of O</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
+										<thead>
+											<tr>
+												<th>S/N</th>
+												<th>Cover Image</th>
+												<th>Category</th>
+												<th>Title</th>
+												<th>Size</th>
+												<th>Measure</th>
+												<th>Fed C of O</th>
+												<th>State C of O</th>
+												<th>Action</th>
+											</tr>
+										</thead>
 										<tbody><?php $num =1; ?>
-                                            @foreach($seePro as $list)
-                                                <tr>
-                                                    <td><?php echo $num; ?></td>
-                                                    <td>
-                                                        @foreach(propertyImage($list->identity) as $photo)
-                                                            <img class="responsive-img" src="{{asset('storage/images/'.$photo->cover_picture)}}" 
-                                                        style="height:50px; width: 50px" alt="Property Image">
-                                                        @endforeach
-                                                    </td>
-                                                    <td>{{$list->category}}</td>
-                                                    <td>{{$list->title}}</td>
-                                                    <td>{{$list->size}}</td>
-                                                    <td>{{$list->measure}}</td>
-                                                    <td>{{$list->fed_c_of_o}}</td>
-                                                    <td>{{$list->state_c_of_o}}</td>
-                                                    <td>
-                                                        <a href="{{route('getting.properties', $list->identity)}}" class="btn btn-success">View More Details</a>
-                                                    </td>
-                                                    
-                                                </tr><?php $num++; ?>
-                                            @endforeach
+											@foreach($seePro as $list)
+												<tr>
+													<td><?php echo $num; ?></td>
+													<td>
+														@foreach(propertyImage($list->identity) as $photo)
+															<img class="responsive-img" src="{{asset('storage/images/'.$photo->cover_picture)}}" 
+														style="height:50px; width: 50px" alt="Property Image">
+														@endforeach
+													</td>
+													<td>{{$list->category}}</td>
+													<td>{{$list->title}}</td>
+													<td>{{$list->size}}</td>
+													<td>{{$list->measure}}</td>
+													<td>{{$list->fed_c_of_o}}</td>
+													<td>{{$list->state_c_of_o}}</td>
+													<td>
+														<a href="{{route('getting.properties', $list->identity)}}" class="btn btn-success">View More Details</a>
+													</td>
+													
+												</tr><?php $num++; ?>
+											@endforeach
 										</tbody>
 										
 									</table>
@@ -507,6 +510,7 @@
 							
 						</div>	
 					</div>
+				@endif
 				
 			</div>
 		</section>

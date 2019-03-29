@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\{ Agent};
 use DB;
+use Validator;
 class AgentController extends Controller
 {
     /**
@@ -41,6 +42,7 @@ class AgentController extends Controller
             'agent_image' => 'file|required|mimes:jpeg,bmp,png,PNG,jpg,JPEG|max:1999',
             'state' =>'required|min:1|max:255',
             'lga' =>'required|min:1|max:255',
+            'email' => 'required|min:|max:255|unique:agents',
         ]);
         
 
@@ -67,12 +69,18 @@ class AgentController extends Controller
             'lga' => $request->input('lga'),
             "agent_number" => rand(001, 1000),
             'registration_id' => rand(10, 700),
+            "email" => $request->input('email'),
         ]);
+        $owner = $request->input('email');
        //dd($data);
 
         if($data->save()){ 
             //return redirect()->route("dashboard")->with("success", "You Have Registered Successfully");
-            return redirect()->back()->with(['success'=> 'You Have Completed Your Registration Successfully']);
+            return redirect()->back()->with([
+                'success'=> 'You Have Completed Your Registration Successfully',
+                'owner'=> $owner,
+                
+            ]);
             //return response()->json(['success'=> 'You Have Completed Your Registration Successfully']);
         } 
     }
@@ -135,15 +143,19 @@ class AgentController extends Controller
         return view("agentProperties")->with('seeProper', $seeProper);
     }
 
-    public function seeProperties($agentNumber)
+    public function seeProperties($email)
     {
-        $check = DB::table('properties')->where(["agent_number" => $agentNumber])->first();
-        if(empty($check)){
-            return redirect()->back()->with(['error'=> 'No Property is Found For The Agent']);
-        }else{
-            $seePro =DB::table('properties')->where(["agent_number" => $agentNumber])->get();
+        // $seePro = DB::table('properties')->where(["agent_number" => $agentNumber])->first();
+        // if(empty($seePro)){
+        //     return view("seeProperty")->with([
+        //         'seePro'=> $seePro,
+        //         'error'=> 'No Property is Found For The Agent',
+        //     ]);
+            
+        // }else{
+            $seePro =DB::table('properties')->where(["email" => $email])->get();
             return view("seeProperty")->with('seePro', $seePro);
-        }
+       // }
     }
 
     public function agent()

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2019 at 06:03 PM
+-- Generation Time: Mar 29, 2019 at 12:43 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -37,6 +37,7 @@ CREATE TABLE `agents` (
   `registration_id` int(11) NOT NULL,
   `state` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lga` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -45,12 +46,13 @@ CREATE TABLE `agents` (
 -- Dumping data for table `agents`
 --
 
-INSERT INTO `agents` (`agent_id`, `agent_name`, `phone_number`, `agent_image`, `agent_number`, `registration_id`, `state`, `lga`, `created_at`, `updated_at`) VALUES
-(1, 'Kolade', '08124685769', 'ABUBAKAR A. SULE.jpg', '615', 207, 'Oyo', 'Oyo East', '2019-03-24 11:00:13', '2019-03-24 11:00:13'),
-(2, 'Seyi Makinde', '09054333345', 'SEYI MAKINDE OYO_1553428961.jpg', '542', 357, 'Oyo', 'Oyo East', '2019-03-24 11:02:41', '2019-03-24 11:02:41'),
-(3, 'Adebayo Adelabu', '0986599044', 'ADEBAYO ADELABU.png', '118', 138, 'Oyo', 'Oyo East', '2019-03-24 11:06:12', '2019-03-24 11:06:12'),
-(4, 'Sola Adeola', '08013453423', 'BALA MOHAMMED_1553429276.jpg', '638', 372, 'Oyo', 'Oyo East', '2019-03-24 11:07:56', '2019-03-24 11:07:56'),
-(5, 'Ganduje', '08087564566', 'Abdullahi-Umar-Ganduje.jpg', '257', 134, 'Oyo', 'Oyo East', '2019-03-24 14:38:17', '2019-03-24 14:38:17');
+INSERT INTO `agents` (`agent_id`, `agent_name`, `phone_number`, `agent_image`, `agent_number`, `registration_id`, `state`, `lga`, `email`, `created_at`, `updated_at`) VALUES
+(1, 'Kolade', '08124685769', 'ABUBAKAR A. SULE.jpg', '615', 207, 'Oyo', 'Oyo East', 'kola@gmail.com', '2019-03-24 11:00:13', '2019-03-24 11:00:13'),
+(2, 'Seyi Makinde', '09054333345', 'SEYI MAKINDE OYO_1553428961.jpg', '542', 357, 'Oyo', 'Oyo East', 'seti@yahoo.com', '2019-03-24 11:02:41', '2019-03-24 11:02:41'),
+(3, 'Adebayo Adelabu', '0986599044', 'ADEBAYO ADELABU.png', '118', 138, 'Oyo', 'Oyo East', 'tunji@gmail.com', '2019-03-24 11:06:12', '2019-03-24 11:06:12'),
+(4, 'Sola Adeola', '08013453423', 'BALA MOHAMMED_1553429276.jpg', '638', 372, 'Oyo', 'Oyo East', 'Odeladetunji@gmail.com', '2019-03-24 11:07:56', '2019-03-24 11:07:56'),
+(5, 'Ganduje', '08087564566', 'Abdullahi-Umar-Ganduje.jpg', '257', 134, 'Oyo', 'Oyo East', 'ladetunji@gmail.com', '2019-03-24 14:38:17', '2019-03-24 14:38:17'),
+(6, 'Kolade Ishola', '07093838387', 'GBOYEGA OYETOLA.jpg', '847', 24, 'Enugu', 'Nkanu East', 'tolajide74@gmail.com', '2019-03-29 08:56:48', '2019-03-29 08:56:48');
 
 -- --------------------------------------------------------
 
@@ -195,19 +197,18 @@ CREATE TABLE `properties` (
   `longitude` varchar(50) DEFAULT NULL,
   `latitude` varchar(50) DEFAULT NULL,
   `propidentity` varchar(50) DEFAULT NULL,
-  `others` varchar(100) DEFAULT NULL,
-  `agent_number` varchar(255) NOT NULL
+  `others` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `properties`
 --
 
-INSERT INTO `properties` (`id`, `email`, `identity`, `category`, `title`, `size`, `measure`, `fed_c_of_o`, `state_c_of_o`, `gazette`, `survey_plan`, `family_reciept`, `registered_survey_plan`, `registered_deed_of_conveyance`, `registered_deed_of_assignment`, `deed_of_assignment`, `deed_of_conveyance`, `governors_consent_letter`, `approved_building_plan`, `longitude`, `latitude`, `propidentity`, `others`, `agent_number`) VALUES
-(196, 'Odeladetunji@gmail.com', '994792', 'For Rent', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL, '615'),
-(197, 'Odeladetunji@gmail.com', '111461', 'For Lease', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL, '615'),
-(198, 'Odeladetunji@gmail.com', '987347', 'For Rent', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL, ''),
-(199, 'Odeladetunji@gmail.com', '57304', 'For Rent', 'House', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL, '');
+INSERT INTO `properties` (`id`, `email`, `identity`, `category`, `title`, `size`, `measure`, `fed_c_of_o`, `state_c_of_o`, `gazette`, `survey_plan`, `family_reciept`, `registered_survey_plan`, `registered_deed_of_conveyance`, `registered_deed_of_assignment`, `deed_of_assignment`, `deed_of_conveyance`, `governors_consent_letter`, `approved_building_plan`, `longitude`, `latitude`, `propidentity`, `others`) VALUES
+(196, 'tunji@gmail.com', '994792', 'For Rent', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL),
+(197, 'Odeladetunji@gmail.com', '111461', 'For Lease', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL),
+(198, 'tolajide74@gmail.com', '987347', 'For Rent', 'Land', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL),
+(199, 'Odeladetunji@gmail.com', '57304', 'For Rent', 'House', '2', 'Hectare', 'Federal C of O', 'State C of O', 'Gazette', 'Survey Plan', 'Family Receipt', 'Registered Survey Plan', 'Registered Deed of Conveyance', 'Registered Deed of Assignment', 'Deed of Assignment', 'Deed of Conveyance', 'Governors Consent Letter', 'Approved Building Plan', '3.9146339000000125', '7.4101151', 'ChIJI7QdhK-SORARQOIGOKAq8mE', NULL);
 
 -- --------------------------------------------------------
 
@@ -443,7 +444,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `agents`
 --
 ALTER TABLE `agents`
-  MODIFY `agent_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `agent_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `facilities`

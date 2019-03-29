@@ -13,7 +13,8 @@
         <script src="/js/jquery-3.2.1.min(first).js" type='text/JavaScript'></script>
         <!--CSS---->
         <link href="{{ asset('CSS/home.css') }}" rel="stylesheet" type="text/css" >
-
+				<link href="{{ asset('CSS/taiwo.css') }}" rel="stylesheet" type="text/css" >
+				<script src="{{ asset('CSS/taiwo.js') }}"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <body>
 	   	     <div class="row topHead" id="">
@@ -47,26 +48,26 @@
 	   	     </div>
 
 	   	     <div class="row login_form">
-	   	     	 <div class="col-md-6 login">
-	   	     	 	  <i class="fas fa-window-close closeform" onclick="closeForm()"></i>
-	   	     	 	  <form class="loginForm" encType="multipart/form-data" method="POST" action="{{URL::to('/')}}"> {{ csrf_field() }}
-	   	     	 	  	   <label id="wan2" style="padding: 10px; text-align: center; color: red; display: none;">wrong username or password!</label>
-                                           <label id="wan3" style="padding: 10px; text-align: center; color: red; display: none;">user does not exit</label>
-	   	     	 	  	   <p>Login</p>
-	   	     	 	  	   <input type="email" placeholder="Email" name="email" id="email"><br>
-	   	     	 	  	   <input type="password" placeholder="Password" name="password" id="password">
-	   	     	 	  	   <button>submit</button>
-	   	     	 	  </form>
+							<div class="col-md-6 login">
+									<i class="fas fa-window-close" onclick="closeForm()"></i>
+									<form class="loginForm" encType="multipart/form-data" method="POST" action="{{URL::to('/')}}"> {{ csrf_field() }}
+											 <label id="wan2" style="padding: 10px; text-align: center; color: red; display: none;">wrong username or password!</label>
+												<label id="wan3" style="padding: 10px; text-align: center; color: red; display: none;">user does not exit</label>
+											 <p>Login</p>
+											 <input type="email" placeholder="Email" name="email" id="email"><br>
+											 <input type="password" placeholder="Password" name="password" id="password">
+											 <button>submit</button>
+									</form>
 
-	   	     	 	  <form class="actualForm1" encType="multipart/form-data" method="POST" action="{{URL::to('/')}}" style="display: none;">{{ csrf_field() }}
-	   	     	 	  	  <input type="text" name="email" id="email1">
-	   	     	 	  	  <input type="text" name="password" id="password1">
-	   	     	 	  </form>
-	   	     	 </div>
-	   	     	 <div class="col-md-6 description">
-	   	     	 	 <p>something</p>
-	   	     	 </div>
-	   	     </div>
+									<form class="actualForm1" encType="multipart/form-data" method="POST" action="{{URL::to('/')}}" style="display: none;">{{ csrf_field() }}
+											<input type="text" name="email" id="email1">
+											<input type="text" name="password" id="password1">
+									</form>
+							</div>
+							<div class="col-md-6 description">
+								 <p>something</p>
+							</div>
+					 </div>
 	   	      <div class="row signup_form">
 	   	     	 <div class="col-md-6 login">
 	   	     	 	  <i class="fas fa-window-close closeform" onclick="closeForm2()"></i>
@@ -438,16 +439,17 @@
 	   	      </div>
 	   	      </div>
              
-	   	     <div class="theFooter">
+	   	     {{-- <div class="theFooter">
 	   	     	<ul>
 	   	     		<li>About Us</li>
 	   	     		<li>Our Contacts</li>
 	   	     	</ul>
 	   	     	<p>Terms and Policies</p>
-	   	     </div>
-                 <div class="loader">
-                       <div id="theLoader"></div>
-                 </div>
+						</div> --}}
+						@include('footer')
+						<div class="loader">
+									<div id="theLoader"></div>
+						</div>
 	    <script src="{{ asset('js/localgovernments.js') }}" type="text/javascript"></script>
 	   <!-- <script src="{{ asset('js/google-map-api.js') }}" type="text/javascript"></script> --> 
         <script type="text/JavaScript">

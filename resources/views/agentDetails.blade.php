@@ -464,8 +464,8 @@
 						<li class="col-12 col-md-6 col-lg-3">
 							<div class="cnt-block equal-hight" style="height: 300px;">
 								<figure><img src="{{asset('agent-logo/'.$list->agent_image)}}" class="img-responsive" alt=""></figure>
-								<h3><a href="{{route('see.properties', $list->agent_number)}}">{{$list->agent_name}}</a></h3>
-								<p data-toggle="modal" data-target=".bd-example-modal-lg">{{$list->phone_number}}</p>
+								<h3><a href="{{route('see.properties', $list->email)}}">{{$list->agent_name}}</a></h3>
+								<p>{{$list->phone_number}}</p>
 								
 							</div>
 						</li>

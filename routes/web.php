@@ -37,8 +37,8 @@ Route::get('/agentFinder', 'AgentFinderController@agentFinder');
 Route::post('/saveReg', 'AgentController@store')->name('adding.agent');
 Route::post('/ourAgents', 'AgentController@agentDetails')->name('getting.agent');
 Route::get('/agentProperties/{identity}', 'AgentController@agentProperties')->name('getting.properties');
-Route::get('/seeProperties/{agentNumber}', 'AgentController@seeProperties')->name('see.properties');
+Route::get('/seeProperties/{email}', 'AgentController@seeProperties')->name('see.properties');
 Route::get('/agentProperty', 'AgentController@agent')->name('proper');
 
-Route::get('/agentDetails', 'AgentFinderController@agentDetails')->name('findAgent');
+//Route::get('/agentDetails', 'AgentFinderController@agentDetails')->name('findAgent');
 

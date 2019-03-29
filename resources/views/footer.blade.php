@@ -46,7 +46,7 @@
 				<li><a href="">Blog</a></li>
 				<li><a href="">Contact</a></li>
 			</ul>
-			<p class="text-center">Copyright @<?php echo date("Y") ?> | Designed With by <a href="">Build Systems</a></p>
+			<p class="text-center">Copyright @<?php echo date("Y") ?> | Designed <a href="">Build Systems</a></p>
 			<ul class="social_footer_ul">
 				<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 				<li><a href=""><i class="fab fa-twitter"></i></a></li>

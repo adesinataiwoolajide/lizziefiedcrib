@@ -118,6 +118,10 @@
                                                 <input type="file" name="agent_image"  class="form-control validate" required placeholder="">
                                           </div>
                                           <div class="md-form mb-6">
+                                                <label data-error="wrong" data-success="right" for="defaultForm-email">E-Mail</label>
+                                                <input type="text" name="email" value="{{$owner}}"  class="form-control validate" required placeholder="" readonly>
+                                          </div>
+                                          <div class="md-form mb-6">
                                                 <label data-error="wrong" data-success="right" for="defaultForm-email">Full Name</label>
                                                 <input type="text" name="agent_name" required  class="form-control validate" required>
                                           </div>

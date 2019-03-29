@@ -452,13 +452,14 @@
 	</div>
 	<div class="" align="center">
         <section class="our-webcoderskull padding-lg col-lg-12" style="width=:1200px; margin-left=:-50px;">
-            <p>hkndvhkhcs</p>
+            <p>Something Here</p>
 			<div class="container">
                 
                     {{-- <div class="row heading heading-icon" align="center">
                         <h4>Our Agent In The Selected Region</h4>
                     </div> --}}
 				@include('message');
+				
 				@foreach($seeProper as $list)
 					<div class="container-fluid">
 						<h2>Property Details</h2>
@@ -871,6 +872,7 @@
 					</div> --}}
 
 				@endforeach
+				
 			</div>
 		</section>
 	</div>
