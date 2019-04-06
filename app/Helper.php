@@ -9,4 +9,10 @@
             "identity" => $identity
         ])->get();
     }
+
+    function propertyQuantity($identity){
+        return \DB::table('quantity')->where([
+            "identity" => $identity
+        ])->get();
+    }
 ?>

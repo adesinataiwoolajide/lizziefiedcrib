@@ -126,36 +126,14 @@ class AgentController extends Controller
      */
     public function agentProperties($identity)
     {
-        
-        // $check = DB::table('properties')->where([
-        //     "agent_number" => $agentNumber
-        // ])->first();
-        // if(empty($check)){
-        //     return redirect()->back()->with(['error'=> 'No Property is Found For The Agent']);
-        // }else{
-        //     $seeProper =DB::table('properties')->where([
-        //         "agent_number" => $agentNumber
-        //     ])->get();
-            
-        //     return view("agentProperties")->with('seeProper', $seeProper);
-        // }
         $seeProper =DB::table('properties')->where(["identity" => $identity ])->get();   
-        return view("agentProperties")->with('seeProper', $seeProper);
+        return view("website.propertyDetails")->with('seeProper', $seeProper);
     }
 
     public function seeProperties($email)
     {
-        // $seePro = DB::table('properties')->where(["agent_number" => $agentNumber])->first();
-        // if(empty($seePro)){
-        //     return view("seeProperty")->with([
-        //         'seePro'=> $seePro,
-        //         'error'=> 'No Property is Found For The Agent',
-        //     ]);
-            
-        // }else{
-            $seePro =DB::table('properties')->where(["email" => $email])->get();
-            return view("seeProperty")->with('seePro', $seePro);
-       // }
+        $seePro =DB::table('properties')->where(["email" => $email])->get();
+        return view("agentProperties")->with('seePro', $seePro);
     }
 
     public function agent()

@@ -16,6 +16,10 @@ class AccountController extends BaseController
           $owner = $request->input('email');
           return view('account')->with('owner', $owner);
     }
+
+    // public function account(){
+    	
+    // }
 }
 
 
