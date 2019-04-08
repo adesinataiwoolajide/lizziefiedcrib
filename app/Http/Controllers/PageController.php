@@ -35,8 +35,8 @@ class PageController extends Controller
 
     public function agentProperties($email)
     {
-        $seePro =DB::table('properties')->where(["email" => $email])->get();
-        return view("website.agentDetails")->with('seePro', $seePro);
+        $seePro =DB::table('properties')->where(["email" => $email])->paginate(10);
+        return view("website.agentProperties")->with('seePro', $seePro);
     }
 
     public function ouragents()

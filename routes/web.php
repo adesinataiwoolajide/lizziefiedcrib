@@ -20,7 +20,7 @@ Route::get('/allProperties', "PageController@properties")->name('listproperties'
 Route::get('/propertyDetails/{identity}', "PageController@propertyDetails")->name('see-property-details');
 Route::get('/allAgents', "PageController@ouragents")->name('listagents');
 Route::get('/agentDetails', "PageController@ouragentsdetails")->name('see-agent-details');
-Route::get('/agentProperties/{email}', "PageController@propertyDetails")->name('see-agent-property');
+Route::get('/agentProperties/{email}', "PageController@agentProperties")->name('see-agent-property');
 
 
 //Post Methods

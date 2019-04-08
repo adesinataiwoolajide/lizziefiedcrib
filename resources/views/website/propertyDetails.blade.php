@@ -40,165 +40,247 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                        <!-- Block heading end -->
-                        <div class="row">
-                            @foreach(propertyImage($listData->identity) as $photo)
-                                <div class="col-md-12 mb-4">
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-                                        </ol>
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->cover_picture)}}" alt="First slide">
+                        
+                            <!-- Block heading end -->
+                            <div class="row">
+                                @foreach(propertyImage($listData->identity) as $photo)
+                                    @foreach(propertyFacility($listData->identity) as $seefacilities)
+                                        <div class="col-md-12 mb-4">
+                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+                                                </ol>
+                                                <div class="carousel-inner" role="listbox">
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->cover_picture)}}" alt="First slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture1)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture2)}}" alt="Third slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture3)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture4)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture5)}}" alt="Third slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture6)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture7)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture8)}}" alt="Third slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture9)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture10)}}" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture11)}}" alt="Third slide">
+                                                    </div>
+                                                    
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture1)}}" alt="Second slide">
+                                            <div class="blog-info details">
+                                                <!-- cars content -->
+                                                <div class="homes-content details-2 mb-5">
+                                                    <!-- cars List -->
+                                                    <ul class="homes-list clearfix">
+                                                        <li>
+                                                            <i class="fa fa-bed" aria-hidden="true"></i>
+                                                            <span> {{$seeQua->bedroom}} Bedroom</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-bath" aria-hidden="true"></i>
+                                                            <span>{{$seeQua->units}} Unit(s)</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-object-group" aria-hidden="true"></i>
+                                                            <span>{{$seefacilities->gated_estate}}</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-car" aria-hidden="true"></i>
+                                                            <span>Garage 1</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-columns" aria-hidden="true"></i>
+                                                            <span>{{$listData->measure}} Measure</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-clone" aria-hidden="true"></i>
+                                                            <span>Balcony 2</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture2)}}" alt="Third slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture3)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture4)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture5)}}" alt="Third slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture6)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture7)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture8)}}" alt="Third slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture9)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture10)}}" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block img-fluid" style="height: 400px;" src="{{asset('storage/images/'.$photo->otherpicture11)}}" alt="Third slide">
-                                            </div>
-                                            
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                    <div class="blog-info details">
-                                        <!-- cars content -->
-                                        <div class="homes-content details-2 mb-5">
-                                            <!-- cars List -->
-                                            <ul class="homes-list clearfix">
-                                                <li>
-                                                    <i class="fa fa-bed" aria-hidden="true"></i>
-                                                    <span>Beds 6</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-bath" aria-hidden="true"></i>
-                                                    <span>Baths 3</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-object-group" aria-hidden="true"></i>
-                                                    <span>720 sq ft</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-car" aria-hidden="true"></i>
-                                                    <span>Garages 2</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-columns" aria-hidden="true"></i>
-                                                    <span>Kitchen 2</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-clone" aria-hidden="true"></i>
-                                                    <span>Balcony 2</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="mb-4">GENERAL INFORMATION</h5>
-                                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit, alias fuga aliquam quod tempora a nisi esse magnam nulla quas! Error praesentium, vero dolorum laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rerum beatae consequatur, totam fugit.</p>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    <!-- cars content -->
-                        <div class="homes-content details mb-5">
-                            @foreach(propertyFacility($listData->identity) as $seefacilities)
+                                    @endforeach
+                                @endforeach
+                            </div>
+                        <!-- cars content -->
+                            <div class="homes-content details mb-5">
+                               
                                 <!-- title -->
-                                <h5 class="mb-4">Amenities</h5>
+                                <h5 class="mb-4">Facilities</h5>
                                 <!-- cars List -->
                                 <ul class="homes-list clearfix">
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Air Cond</span>
+                                        <span>{{$seefacilities->pop}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Balcony</span>
+                                        <span>{{$seefacilities->newly_renovated}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Internet</span>
+                                        <span>{{$seefacilities->newly_built}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Dishwasher</span>
+                                        <span>{{$seefacilities->fenced}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Bedding</span>
+                                        <span>{{$seefacilities->well_water}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Cable TV</span>
+                                        <span>{{$seefacilities->borehole}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Parking</span>
+                                        <span>{{$seefacilities->gated_estate}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Pool</span>
+                                        <span>{{$seefacilities->security}}</span>
+                                    </li>
+                                    <li>
+                                        
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$seefacilities->water_treatment_plant}}</span>
                                     </li>
                                     <li>
                                         <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <span>Fridge</span>
+                                        <span>{{$seefacilities->all_room_ensuit}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$seefacilities->ample_parking_space}}</span>
+                                    </li>
+                                
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$seefacilities->all_others_not_listed}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$seefacilities->gated_estate}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->fed_c_of_o}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->state_c_of_o}}</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->gazette}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->survey_plan}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->family_reciept}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->registered_survey_plan}}</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->registered_deed_of_conveyance}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->registered_deed_of_assignment}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->deed_of_assignment}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->deed_of_conveyance}}</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->registered_survey_plan}}</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->governors_consent_letter}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->approved_building_plan}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->longitude}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check-square" aria-hidden="true"></i>
+                                        <span>{{$listData->latitude}}</span>
                                     </li>
                                 </ul>
-                            @endforeach
-                        </div>
-                        <div class="property-location mb-5">
-                            <h5>Location</h5>
-                            <div class="divider-fade"></div>
-                            <div id="map-contact" class="contact-map"></div>
-                        </div>
+                                
+                            </div>
+                            <div class="property-location mb-5">
+                                <h5>Location</h5>
+                                <div class="divider-fade"></div>
+                                <div id="map-contact" class="contact-map"></div>
+                            </div>
+                        @endforeach
                         <!-- START SECTION ASSIGNED AGENTS -->
                         <section class="team assigned">
                             <div class="container">

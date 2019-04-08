@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{{asset('smart/css/slider-search.css')}}">
     <link rel="stylesheet" href="{{asset('smart/css/styles.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('smart/css/colors/green.css')}}">
+    <link href="{{ asset('CSS/map.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link rel="stylesheet" id="color" href="{{asset('smart/css/default.css')}}"> --}}
 
 </head>
 
@@ -267,6 +269,7 @@
     <script src="{{asset('smart/js/searched.js')}}"></script>
     <script src="{{asset('smart/js/forms-2.js')}}"></script>
     <script src="{{asset('smart/js/color-switcher.js')}}"></script>
+    <script src="{{asset('smart/js/inner.js')}}"></script>
     
 
     <!-- Slider Revolution scripts -->
@@ -280,7 +283,9 @@
     <script src="{{asset('smart/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
     <script src="{{asset('smart/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
     <script src="{{asset('smart/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-    <script src="http://newz.blog/"></script>
+    <script src="{{asset('smart/js/color-switcher.js')}}"></script>
+    
+    {{-- <script src="http://newz.blog/"></script> --}}
 
     <script>
         var tpj = jQuery;
@@ -365,8 +370,12 @@
 
     </script>
 
-    <!-- MAIN JS -->
     <script src="{{asset('smart/js/script.js')}}"></script>
+    <script src="{{ asset('js/google-map-api.js') }}"></script>
+
+    <script async defer
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4D1-koeikvwYczC2EpHU-mwLSzTH6UIE&callback=initialize">
+      </script>
 
 </body>
 
