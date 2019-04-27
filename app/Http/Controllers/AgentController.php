@@ -25,7 +25,7 @@ class AgentController extends Controller
      */
     public function create()
     {
-        //return view('test');
+        return view('website.agentRegistration');
     }
 
     /**
@@ -43,6 +43,8 @@ class AgentController extends Controller
             'state' =>'required|min:1|max:255',
             'lga' =>'required|min:1|max:255',
             'email' => 'required|min:|max:255|unique:agents',
+            'category' =>'required|min:1|max:255',
+            'description' => 'required|min:1|max:255',
         ]);
         
 
@@ -70,10 +72,11 @@ class AgentController extends Controller
             "agent_number" => rand(001, 1000),
             'registration_id' => rand(10, 700),
             "email" => $request->input('email'),
+            "category" => $request->input('category'),
+            "description" => $request->input('description'),
         ]);
         $owner = $request->input('email');
-       //dd($data);
-
+       
         if($data->save()){ 
             //return redirect()->route("dashboard")->with("success", "You Have Registered Successfully");
             return redirect()->back()->with([
@@ -103,16 +106,17 @@ class AgentController extends Controller
             "lga" => $request->input('lga'),
         ])->first();
         if(empty($check)){
-            return redirect()->back()->with(['error'=> 'No Agent is found in the selected areas']);
+            return redirect()->back()->with(['error'=> 'No Agent was found in the selected areas']);
         }else{
-            $seeAgent =Agent::where([
+            $agent =Agent::where([
                 "state" => $request->input('state'), 
                 "lga" => $request->input('lga')
             ])->get();
             
-            return  view('agentDetails')->with([
-                'seeAgent' => $seeAgent,
-                'success'=> 'List of Selected Agents in '. $request->input['state'] . " ". $request->input['lga'],
+            return  view('website.listAgents')->with([
+                'agent' => $agent,
+                'success'=> 'List of Selected Agents in '. 
+                $request->input['state'] . " ". $request->input['lga'],
             ]);
             
         }
@@ -134,6 +138,16 @@ class AgentController extends Controller
     {
         $seePro =DB::table('properties')->where(["email" => $email])->get();
         return view("agentProperties")->with('seePro', $seePro);
+    }
+
+    public function agentInformtion($email)
+    {
+        $seeProper =DB::table('properties')->where(["email" => $email ])->get();
+        $info =DB::table('agents')->where(["email" => $email ])->get();     
+        return view("website.agentDetails")->with([
+            'seeProper' =>$seeProper,
+            "info" => $info,
+        ]);
     }
 
     public function agent()

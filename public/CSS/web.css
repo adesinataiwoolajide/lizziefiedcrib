@@ -1,0 +1,546 @@
+.first {
+  border-top: 1px solid black;;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+}
+
+.first div:first-child {
+ border-right: 1px solid black;
+}
+
+.second {
+  border-top: 1px solid black;;
+  border-bottom: 1px solid black;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+}
+
+.first div:nth-child(2) {
+   border-right: 1px solid black;
+}
+
+.header {
+ width: 100%;
+ background-color: #FFF8F8;
+ padding-top: 25px;
+ /* display: none; */
+ padding-bottom: 10px;
+}
+
+.header ul {
+ background-color: transparent;
+}
+
+.header ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.header ul li:first-child {
+ /* padding-right: 10px; */
+}
+
+.services {
+ margin-right: 5px;
+ background-color: transparent;
+ width: 300px;
+ display: none;
+}
+
+#servicesID:hover > .forServices .services {
+ display: inline-block;
+}
+
+.services li {
+ font-size: 13px;
+}
+
+.forServices {
+ z-index: 8;
+ background-color: #FFF8F8;
+ display: flex;
+ flex-wrap: wrap;
+ position: absolute;
+ left: 10%;
+ top: 70px;
+ padding-bottom: 20px;
+}
+
+.theTechnlogies {
+ margin-right: 5px;
+ background-color: transparent;
+ width: 180px;
+ padding-bottom: 20px;
+ display: none;
+}
+
+#technologyID:hover > .forTechnology .theTechnlogies {
+ display: inline-block;
+}
+
+.theTechnlogies li {
+ font-size: 13px;
+}
+
+.forTechnology {
+ z-index: 8;
+ background-color: #FFF8F8;
+ display: flex;
+ flex-wrap: wrap;
+ position: absolute;
+ left: 0%;
+ top: 70px;
+ padding-bottom: 20px;
+}
+
+.forCaseStudies {
+ z-index: 8;
+ background-color: #FFF8F8;
+ display: flex;
+ flex-wrap: wrap;
+ position: absolute;
+ left: 0%;
+ top: 70px;
+ padding-bottom: 20px;
+}
+
+.casestudies {
+ margin-right: 5px;
+ background-color: transparent;
+ width: 260px;
+ padding-bottom: 20px;
+ display: none;
+}
+
+#caseStudyID:hover > .forCaseStudies .casestudies {
+ display: inline-block;
+}
+
+.casestudies li {
+ font-size: 13px;
+}
+
+.heading {
+ background-color: #FFF8F8;
+ border-bottom: 1px solid black;
+ padding-bottom: 0px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+.heading img {
+ width: 80%;
+ padding-left: 15px;
+ padding-top: 10px;
+ padding-bottom: 5px;
+}
+
+.heading i {
+ float: right;
+ margin-right: 10px;
+ font-size: 30px;
+ border: 1px solid black;
+ padding: 10px;
+ border-radius: 5px;
+ /* margin-bottom: 10px; */
+}
+
+.secondHeader {
+ display: none;
+}
+
+.items {
+ background-color: #FFF8F8;
+}
+
+.items li {
+ padding: 20px;
+ padding-top: 15px;
+ padding-bottom: 15px;
+ background-color: #FFF8F8;
+}
+
+.mobileForAbout {
+ width: 100%;
+ background-color: #FFF8F8;
+ display: none;
+}
+
+.mobileAbout li {
+ list-style-type: none;
+ display: block;
+ padding: 10px;
+ padding-left: 40px;
+}
+
+.mobileForServices {
+ width: 100%;
+ background-color: #FFF8F8;
+ display: none;
+}
+
+.mobileServices li {
+ list-style-type: none;
+ display: block;
+ padding: 10px;
+ padding-left: 20px;
+}
+
+.MobileTechnlogies li {
+ list-style-type: none;
+ display: block;
+ padding: 10px;
+ padding-left: 20px;
+}
+
+.mobileForTechnology {
+ width: 100%;
+ background-color: #FFF8F8;
+ display: none;
+}
+
+.MobileTechnlogies li:first-child {
+ color: #4A9BFB;
+}
+
+.MobileForCaseStudies {
+ width: 100%;
+ background-color: #FFF8F8;
+ display: none;
+}
+
+.mobileCasestudies li {
+ list-style-type: none;
+ display: block;
+ padding: 10px;
+ padding-left: 20px;
+}
+
+.technologylist {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.technologylist img {
+ margin-top: 50px;
+ margin-left: 30px;
+}
+
+.forResources {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ padding-bottom: 100px;
+ padding-top: 50px;
+}
+
+.forResources div {
+ width: 13%;
+ margin-left: 30px;
+ margin-top: 30px;
+}
+
+.forResources div p {
+ color: #274D8A;
+ padding: 0px;
+ width: 100%;
+ margin-bottom: 0px;
+}
+
+.bannerSlider {
+ background-color: #FFF8F8;
+ padding-bottom: 70px;
+ width: 100%;
+ position: relative;
+ z-index: 3;
+}
+
+.containBody {
+
+}
+
+.bannerSlider img {
+ position: absolute;
+ right: 20px;
+ top: 50px;
+ width: 55%;
+ background-color: #FFF8F8;
+}
+
+.design button {
+ color: white;
+ background-color: #FD8023;
+ padding: 10px 30px;
+ border-radius: 5px;
+ border: none;
+ margin-left: 20px;
+ margin-top: 30px;
+}
+
+.design h3:first-child {
+ margin-top: 100px;
+ font-weight: bold;
+ background-color: transparent;
+ margin-left: 20px;
+ font-size: 40px;
+}
+
+.design h3:nth-child(2) {
+ /* margin-top: 100px; */
+ font-weight: bold;
+ background-color: transparent;
+ margin-left: 20px;
+ font-size: 40px;
+}
+
+.design h3:nth-child(3) {
+ /* margin-top: 100px; */
+ font-weight: bold;
+ background-color: transparent;
+ margin-left: 20px;
+ font-size: 40px;
+}
+
+.design p {
+ margin-left: 20px;
+}
+
+.design {
+ position: absolute;
+ top: 0px;
+ left: 20px;
+ z-index: 2;
+ width: 45%;
+ padding-bottom: 70px;
+}
+
+#image1 {
+ background-size: cover;
+ background-position: center;
+ height: 100%;
+ margin-top: 100px;
+ margin-right: 20px;
+ /* background-image: url('/images/BuildSystem/Home/someting.png'); */
+}
+
+.aboutPage {
+ background-color: #70B9FC;
+}
+
+#carouselExampleSlidesOnly {
+ height: 400px;
+}
+
+
+.carousel-inner {
+ height: 600px;
+}
+
+@media screen and (max-width: 360px) {
+ .design h3 {
+   font-size: 30px !important;
+   margin-left: 10px !important;
+ }
+
+ .design button {
+   margin-left: 10px;
+ }
+
+ .design p {
+   margin-left: 10px;
+ }
+
+ .bannerSlider img {
+   width: 70%;
+   top: 10px;
+ }
+
+ .design {
+   width: 70%;
+   padding-bottom: 20px;
+ }
+
+ .header {
+   display: none;
+ }
+ .secondHeader {
+   display: block;
+ }
+ .forQuote input {
+   padding: 10px;
+   border: none;
+   font-size: 14px;
+   width: 80%;
+ }
+
+ .forQuote i {
+   background-color: #70B9FC;
+   padding: 10px;
+   font-size: 15px;
+   color: white;
+   border-radius: 50%;
+ }
+
+ .first {
+    border-top: none;
+    margin-left: 0px !important;
+    margin-right: 1px !important;
+    padding-bottom: 0px !important;
+ }
+
+ .first div {
+   padding-bottom: 5px;
+   padding-top: 5px;
+ }
+
+ .second div {
+   padding-bottom: 5px;
+   padding-top: 5px;
+ }
+ .second {
+    border-top: none;
+    padding-top: 5px !important;
+    margin-left: 0px !important;
+    margin-right: 1px !important;
+ }
+
+
+ .lastSection {
+   width: 100%;
+   padding-top: 30px;
+   padding-left: 20px;
+   padding-right: 20px;
+   background-color: #0E131F;
+ }
+
+ .forSubmitButton button {
+   padding: 10px 40px;
+   font-size: 15px;
+   background-color: #FD8023;
+   margin-left: 7.5%;
+   margin-bottom: 50px;
+ }
+
+ .forSubmitButton button i {
+   background-color: #FD8023;
+ }
+
+ textarea
+ {
+   width: 93%;
+   padding: 20px;
+   height: 300px;
+   border: none;
+   border: 1px solid silver;
+   margin-left: 3% !important;
+   margin-top: 10px !important;
+   margin-bottom: 50px !important;
+ }
+
+ #note {
+   margin-bottom: 0px;
+   margin-top: 10px;
+   margin-left: 10px;
+ }
+
+ .forSubmitButton {
+   width: 100%;
+   padding-top: 10px !important;
+   border-top: none;
+ }
+
+
+ .whoWeAre {
+   width: 100%;
+   padding: 40px;
+   padding-top: 30px;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 30px;
+ }
+
+ .howWeAutomate {
+   width: 100%;
+   padding: 40px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-color: #0E131F;
+ }
+
+ .technology {
+   width: 100%;
+   padding: 40px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-color: #FFF8F8;
+   padding-bottom: 100px;
+ }
+
+ .technology h3 {
+   /* text-align: center; */
+   font-size: 20px;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+ }
+
+ .whoWeAre h3 {
+   font-size: 20px;
+ }
+
+
+ .howWeAutomate h3 {
+   font-size: 22px;
+ }
+
+ .forResources div {
+   width: 24%;
+   margin-top: 30px;
+   margin-left: 15px;
+   margin-right: 15px;
+ }
+
+ .forResources div img {
+   width: 100%;
+ }
+
+ .forResources {
+   padding-top: 10px;
+ }
+
+ .resources h3 {
+   font-size: 20px;
+ }
+
+}
+
+@media screen and (max-width: 671px) and (min-width: 360px) {
+ .design h3 {
+   font-size: 25px !important;
+   margin-left: 10px !important;
+ }
+
+ .design button {
+   margin-left: 10px;
+ }
+
+ .design p {
+   margin-left: 10px;
+ }
+
+ .bannerSlider img {
+   width: 60%;
+   top: 10px;
+ }
+
+ .design {
+   width: 50%;
+   padding-bottom: 20px;
+ }
+
+}

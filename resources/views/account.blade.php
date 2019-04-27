@@ -1456,7 +1456,7 @@
  
 
       </script>
-      <script src="{{ asset('js/localgovernments.js') }}" type="text/javascript"></script>
+      
       <script src="{{ asset('js/google-map-api.js') }}" type="text/javascript"></script>
       <script src="{{ asset('js/secondPropertyDetails.js') }}"></script>
       <script src="{{ asset('js/editThisProperty.js') }}"></script>

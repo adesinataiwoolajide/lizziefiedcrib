@@ -125,13 +125,16 @@ function displayLGA(param){
 
 function useCity(param){
     var parentE = document.getElementById('locaGv');
-    //console.log(param);
+    console.log(param);
+    console.log(parentE);
     var emptOptn = '<option value="" id="optG">Select LGA</option>';
     parentE.innerHTML = emptOptn;
     for (var i = 0; i < param.length; i++) {
          var elem = '<option value="' + param[i] + '">' + param[i] + '</option>';
                     $(elem).insertBefore('#optG');
+                   // console.log(parentE);
     }
+    console.log(document.getElementById('locaGv'));
 }
 
 function populate_LG(param){
@@ -148,6 +151,8 @@ function populate_LG(param){
 function useSelectedItem(param){
     console.log(param);
     var parentE = document.getElementById('locaGv');
+    console.log(parentE);
+   // console.log(param.value);
     parentE.innerHTML = '';
     useCity(lGA[param.value]);
 }
@@ -159,35 +164,5 @@ function useTheState(param){
     populate_LG(lGA[param.value]);
 }
 
-function useSelectedItemList(param){
-    console.log(param);
-    var parentE = document.getElementById('locaGovt');
-    parentE.innerHTML = '';
-    useCity(lGA[param.value]);
-}
 
-function useTheStateList(param){
-    console.log(param);
-    var parentE = document.getElementById('loca_Govt');
-    parentE.innerHTML = '';
-    populate_LG(lGA[param.value]);
-}
-
-function useTheStates(param){
-    console.log(param);
-    var parentE = document.getElementById('loca_Govt');
-    parentE.innerHTML = '';
-    populate_LG(lGA[param.value]);
-}
-
-function populate_LGOVT(param){
-    var parentE = document.getElementById('loca_Govt');
-    //console.log(param);
-    var emptOptn = '<option value="" id="optG2">Select LGA</option>';
-    parentE.innerHTML = emptOptn;
-    for (var i = 0; i < param.length; i++) {
-         var elem = '<option value="' + param[i] + '">' + param[i] + '</option>';
-                    $(elem).insertBefore('#optG2');
-    }
-}
 

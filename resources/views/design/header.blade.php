@@ -10,7 +10,7 @@
     <title>Smart Crib</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('smart/images/logo.svg')}}">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="{{asset('smart/css/jquery-ui.css')}}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
     <!-- FONT AWESOME -->
@@ -31,8 +31,22 @@
     <link rel="stylesheet" href="{{asset('smart/css/styles.css')}}">
     <link rel="stylesheet" id="color" href="{{asset('smart/css/colors/green.css')}}">
     <link href="{{ asset('CSS/map.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ asset('CSS/web.css') }}" rel="stylesheet" type="text/css" > --}}
+    <script src="{{ asset('js/jquery-3.2.1.min(first).js') }}" type='text/JavaScript'></script>
+
+    
+    {{-- <link href="{{ asset('smart/mmenu/css/all-css.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css')}}"> --}}
     {{-- <link rel="stylesheet" id="color" href="{{asset('smart/css/default.css')}}"> --}}
 
+
+    {{-- <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}" type="text/JavaScript"></script>
+    <script src="{{ asset('js/jquery-3.2.1.min(first).js') }}" type='text/JavaScript'></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+    {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"> --}}
 </head>
 
 <body class="<?php echo $body ?>">
@@ -220,7 +234,7 @@
                                 <li>
                                     <div class="info">
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <p class="in-p ti">support@findhouses.com</p>
+                                        <p class="in-p ti">support@findhobuildsystemuses.com</p>
                                     </div>
                                 </li>
                             </ul>
@@ -238,7 +252,7 @@
         <div class="second-footer">
             <div class="container">
                 <p>2018 © Copyright - All Rights Reserved.</p>
-                <p>Made With <i class="fa fa-heart" aria-hidden="true"></i> By Code-Theme</p>
+                <p>Made With <i class="fa fa-heart" aria-hidden="true"></i> By Build Syatem</p>
             </div>
         </div>
     </footer>
@@ -251,7 +265,7 @@
     <script src="{{asset('smart/js/tether.min.js')}}"></script>
     <script src="{{asset('smart/js/moment.js')}}"></script>
     <script src="{{asset('smart/js/transition.min.js')}}"></script>
-    <script src="{{asset('smart/js/bootstrap.min.js')}}"></script>
+    {{-- <script src="{{asset('smart/js/bootstrap.min.js')}}"></script> --}}
     <script src="{{asset('smart/js/fitvids.js')}}"></script>
     <script src="{{asset('smart/js/jquery.waypoints.min.js')}}"></script>
     <script src="{{asset('smart/js/jquery.counterup.min.js')}}"></script>
@@ -264,10 +278,15 @@
     <script src="{{asset('smart/js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('smart/js/ajaxchimp.min.js')}}"></script>
     <script src="{{asset('smart/js/newsletter.js')}}"></script>
+
+
     <script src="{{asset('smart/js/jquery.form.js')}}"></script>
     <script src="{{asset('smart/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('smart/js/searched.js')}}"></script>
+
+   {{-- <script src="{{asset('smart/js/searched.js')}}"></script> --}}
     <script src="{{asset('smart/js/forms-2.js')}}"></script>
+
+
     <script src="{{asset('smart/js/color-switcher.js')}}"></script>
     <script src="{{asset('smart/js/inner.js')}}"></script>
     
@@ -285,8 +304,14 @@
     <script src="{{asset('smart/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
     <script src="{{asset('smart/js/color-switcher.js')}}"></script>
     
-    {{-- <script src="http://newz.blog/"></script> --}}
 
+    <script src="{{asset('smart/js/script.js')}}"></script>
+    <script src="{{ asset('js/google-map-api.js') }}"></script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4D1-koeikvwYczC2EpHU-mwLSzTH6UIE&callback=initialize">
+    </script>
+    <script src="{{asset('js/localgovernments.js')}}" ></script>
     <script>
         var tpj = jQuery;
         var revapi486;
@@ -334,7 +359,6 @@
                                 v_offset: 0
                             }
                         }
-
                     },
                     responsiveLevels: [1200, 1040, 778, 480],
                     visibilityLevels: [1200, 1040, 778, 480],
@@ -367,15 +391,9 @@
                 });
             }
         }); /*ready*/
-
     </script>
-
-    <script src="{{asset('smart/js/script.js')}}"></script>
-    <script src="{{ asset('js/google-map-api.js') }}"></script>
-
-    <script async defer
-             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4D1-koeikvwYczC2EpHU-mwLSzTH6UIE&callback=initialize">
-      </script>
+    
+     
 
 </body>
 

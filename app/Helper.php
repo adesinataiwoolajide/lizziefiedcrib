@@ -15,4 +15,10 @@
             "identity" => $identity
         ])->get();
     }
+
+    function agentDetails($email){
+        return \DB::table('agents')->where([
+            "email" => $email
+        ])->get();
+    }
 ?>

@@ -1,4 +1,4 @@
-<div class="header">
+    <div class="header">
         <div class="header-top">
             <div class="container">
                 <div class="top-info hidden-sm-down">
@@ -48,72 +48,276 @@
 
                 <nav id="main-menu" class="collapse" style="margin-top: ; margin-left:  1px">
                     <ul class="">
-                        <li class="hidden-lg-up">
-                            <div class="po">
-                                <a data-toggle="collapse" href="#home" aria-expanded="false">Buy</a>
-                            </div>
-                            <div class="collapse" id="home">
-                                <div class="card card-block">
-                                    <a class="dropdown-item" href="index.html">Home Map</a>
-                                    
+                        <li class="nav-item dropdown hidden-lg-up has-mega-menu "> 
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" 
+                            aria-haspopup="true" aria-expanded="false">Buy</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row ">
+                                        <div class="col-sm-4 col-md-x ">
+                                            <b>Dexter homes for sale </b>
+                                            <a class="dropdown-item" href="">Home for sale</a>
+                                            <a class="dropdown-item" href="">For sale by owner</a>
+                                            <a class="dropdown-item" href="">New construction</a>
+                                            <a class="dropdown-item" href="">Coming soon</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-sm-4 col-md-x"> 
+                                            <b>Resources </b>
+                                            
+                                            <a class="dropdown-item" href="">Buyers Guide</a>
+                                            <a class="dropdown-item" href="">Find a buyers's agent</a>
+                                            <a class="dropdown-item" href="">Schools</a>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </li>
-                        <!-- END COLLAPSE MOBILE MENU -->
-                        <li class="dropdown hidden-md-down">
-                            <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-                            aria-expanded="false" href="#">Buy</a>
+
+                        <li class="nav-item dropdown hidden-md-down has-mega-menu "> <a class="nav-link dropdown-toggle" 
+                            data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Buy</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.html">Home Map</a>
-                                
-                            </div>
-                        </li>
-                        <!-- STAR COLLAPSE MOBILE MENU -->
-                        <li class="hidden-lg-up">
-                            <div class="po">
-                                <a data-toggle="collapse" href="#listing" aria-expanded="false">Rent</a>
-                            </div>
-                            <div class="collapse" id="listing">
-                                <div class="card card-block">
-                                    <a class="dropdown-item" href="properties-full-list.html">Full List</a>
+                                <div class="container container-sm">
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-x ">
+                                            <b>Dexter homes for sale </b>
+                                            
+                                            <a class="dropdown-item" href="">Home for sale</a>
+                                            <a class="dropdown-item" href="">For sale by owner</a>
+                                            <a class="dropdown-item" href="">New construction</a>
+                                            <a class="dropdown-item" href="">Coming soon</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            <b>Resources </b>
+                                            
+                                            <a class="dropdown-item" href="">Buyers Guide</a>
+                                            <a class="dropdown-item" href="">Find a buyers's agent</a>
+                                            <a class="dropdown-item" href="">Schools</a>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </li>
-                        <!-- END COLLAPSE MOBILE MENU -->
-                        <li class="dropdown hidden-md-down">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-                            aria-expanded="false" href="#">Rent</a>
+
+                        <li class="nav-item dropdown hidden-lg-up has-mega-menu "> 
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" 
+                            aria-haspopup="true" aria-expanded="false">Rent</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="properties-full-list.html">Full List</a>
-                            </div>
-                        </li>
-                        <!-- STAR COLLAPSE MOBILE MENU -->
-                        <li class="hidden-lg-up">
-                            <div class="po">
-                                <a data-toggle="collapse" href="#services" aria-expanded="false">Sell</a>
-                            </div>
-                            <div class="collapse" id="services">
-                                <div class="card card-block">
-                                    <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
+                                <div class="container container-sm">
+                                    <div class="row ">
+                                        <div class="col-md-4 col-md-x ">
+                                            <b>City Rentals </b>
+                                            
+                                            <a class="dropdown-item" href="">Property</a>
+                                            <a class="dropdown-item" href="">Apartment for rent</a>
+                                            <a class="dropdown-item" href="">Houses for Rent</a>
+                                            <a class="dropdown-item" href="">All rental listings</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            <b>I'm a Rental Manager </b>
+                                            <a class="dropdown-item" href="">Sign in to see your listing</a>
+                                            <a class="dropdown-item" href="">List a property</a>
+                                            <a class="dropdown-item" href="">Rent payments</a>
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            <b>I'm a Renter  </b>
+                                            <a class="dropdown-item" href="">My Rent payments</a>
+                                            <a class="dropdown-item" href="">Rent affordable calculator</a>
+                                            
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </li>
-                        <!-- END COLLAPSE MOBILE MENU -->
-                        <li class="dropdown hidden-md-down">
-                            <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-                            aria-expanded="false" href="#">Sell</a>
+
+                        <li class="nav-item dropdown hidden-md-down has-mega-menu "> <a class="nav-link dropdown-toggle" 
+                            data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Rent</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="agents-listing-grid.html">Agents Listing Grid</a>
+                                <div class="container container-sm">
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-x ">
+                                            <b>City Rentals </b>
+                                            
+                                            <a class="dropdown-item" href="">Property</a>
+                                            <a class="dropdown-item" href="">Apartment for rent</a>
+                                            <a class="dropdown-item" href="">Houses for Rent</a>
+                                            <a class="dropdown-item" href="">All rental listings</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-md-3 col-md-x"> 
+                                            <b>I'm a Rental Manager </b>
+                                            <a class="dropdown-item" href="">Sign in to see your listing</a>
+                                            <a class="dropdown-item" href="">List a property</a>
+                                            <a class="dropdown-item" href="">Rent payments</a>
+                                        </div>
+                                        <div class="col-md-3 col-md-x"> 
+                                            <b>I'm a Renter  </b>
+                                            <a class="dropdown-item" href="">My Rent payments</a>
+                                            <a class="dropdown-item" href="">Rent affordable calculator</a>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </li>
+
+                        <li class="nav-item dropdown hidden-lg-up has-mega-menu "> 
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" 
+                            aria-haspopup="true" aria-expanded="false">Agent Findern</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row " style="mergin-left:-200px;">
+                                        <div class="col-md-4 col-md-x ">
+                                            <b>Looking for pros? </b>
+                                            
+                                            <a class="dropdown-item" href="">Real estate agents</a>
+                                            <a class="dropdown-item" href="">Property managers</a>
+                                            <a class="dropdown-item" href="">Other pros</a>
+                                            <a class="dropdown-item" href="">All rental listings</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            
+                                            <a class="dropdown-item" href="">Property Improvement pros</a>
+                                            <a class="dropdown-item" href="">Builders</a>
+                                            
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            <b>I'm a pro  </b>
+                                            <a class="dropdown-item" href="">Agent advertising</a>
+                                            <a class="dropdown-item" href="">Agent resource center</a>
+                                            <a class="dropdown-item" href="">Create a free Agent account</a>
+                                            
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                                
+                                            <a class="dropdown-item" href="">Agent email scripts</a>
+                                            <a class="dropdown-item" href="">Listing flyer templates</a>
+                                            <a class="dropdown-item" href="">Create a free Agent account</a>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown hidden-md-down has-mega-menu "> <a class="nav-link dropdown-toggle" 
+                            data-toggle="dropdown"  role="button" aria-haspopup="true" 
+                            aria-expanded="false">Agent Finder</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-x ">
+                                            <b>Looking for pros? </b>
+                                            
+                                            <a class="dropdown-item" href="">Real estate agents</a>
+                                            <a class="dropdown-item" href="">Property managers</a>
+                                            <a class="dropdown-item" href="">Other pros</a>
+                                            <a class="dropdown-item" href="">All rental listings</a>
+                                            <a class="dropdown-item" href="">All homes</a>
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            
+                                            <a class="dropdown-item" href="">Property Improvement pros</a>
+                                            <a class="dropdown-item" href="">Builders</a>
+                                            
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                            <b>I'm a pro  </b>
+                                            <a class="dropdown-item" href="">Agent advertising</a>
+                                            <a class="dropdown-item" href="">Agent resource center</a>
+                                            <a class="dropdown-item" href="">Create a free Agent account</a>
+                                            
+                                        </div>
+                                        <div class="col-md-4 col-md-x"> 
+                                                
+                                            <a class="dropdown-item" href="">Agent email scripts</a>
+                                            <a class="dropdown-item" href="">Listing flyer templates</a>
+                                            <a class="dropdown-item" href="">Create a free Agent account</a>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                       
+                       
                         <!-- STAR COLLAPSE MOBILE MENU -->
-                        <li class="hidden-lg-up">
+
+                        {{-- <li class="nav-item dropdown hidden-lg-up has-mega-menu "> 
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" 
+                            aria-haspopup="true" aria-expanded="false">Sale</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row ">
+                                        <div class="col-md-3 col-md-x ">
+                                            <b>Selling tools</b>
+                                            <a class="dropdown-item" href="">See your Property Valuation</a>
+                                            <a class="dropdown-item" href="">City property valuation</a>
+                                            <a class="dropdown-item" href="">Find a seller's agent</a>
+                                            
+                                        </div>
+                                        <div class="col-md-3 col-md-x"> 
+                                            <b>Post a home for sale </b>
+                                            <a class="dropdown-item" href="">For sale by owner</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown hidden-md-down has-mega-menu "> <a class="nav-link dropdown-toggle" 
+                            data-toggle="dropdown"  role="button" aria-haspopup="true" 
+                            aria-expanded="false">Sell</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-x ">
+                                            <b>Selling tools</b>
+                                            <a class="dropdown-item" href="">See your Property Valuation</a>
+                                            <a class="dropdown-item" href="">City property valuation</a>
+                                            <a class="dropdown-item" href="">Find a seller's agent</a>
+                                            
+                                        </div>
+                                        <div class="col-md-3 col-md-x"> 
+                                            <b>Post a home for sale </b>
+                                            <a class="dropdown-item" href="">For sale by owner</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li> --}}
+                        
+                        <li class="hidden-lg-up has-mega-menu ">
                             <div class="po">
                                 <a data-toggle="collapse" href="#about" aria-expanded="false">Commercial</a>
                             </div>
-                            <div class="collapse" id="about">
-                                <div class="card card-block">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
+                            <div class="dropdown-menu">
+                                <div class="container container-sm">
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-x ">
+                                            <b>Selling tools</b>
+                                            <a class="dropdown-item" href="">See your Property Valuation</a>
+                                            <a class="dropdown-item" href="">City property valuation</a>
+                                            <a class="dropdown-item" href="">Find a seller's agent</a>
+                                            
+                                        </div>
+                                        <div class="col-md-3 col-md-x"> 
+                                            <b>Post a home for sale </b>
+                                            <a class="dropdown-item" href="">For sale by owner</a>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -122,9 +326,23 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
                             aria-expanded="false" href="#">Commercial</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="about.html">About Us</a>
-                                
-                            </div>
+                                    <div class="container container-sm">
+                                        <div class="row">
+                                            <div class="col-md-3 col-md-x ">
+                                                <b>Selling tools</b>
+                                                <a class="dropdown-item" href="">See your Property Valuation</a>
+                                                <a class="dropdown-item" href="">City property valuation</a>
+                                                <a class="dropdown-item" href="">Find a seller's agent</a>
+                                                
+                                            </div>
+                                            <div class="col-md-3 col-md-x"> 
+                                                <b>Post a home for sale </b>
+                                                <a class="dropdown-item" href="">For sale by owner</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                         </li>
                         <!-- STAR COLLAPSE MOBILE MENU -->
                         <li class="hidden-lg-up">
@@ -148,12 +366,13 @@
                         </li>
                         <li class="hidden-lg-up">
                             <div class="po">
-                                <a data-toggle="collapse" href="#home" aria-expanded="false">Agent Finder</a>
+                                <a data-toggle="collapse" href="" aria-expanded="false">Agent Finder</a>
                             </div>
                             <div class="collapse" id="home">
                                 <div class="card card-block">
                                     <a class="dropdown-item" href="{{route('listagents')}}">All Agents </a>
-                                    <a class="dropdown-item" href="index.html">Home Map</a>
+                                    <a class="dropdown-item" href="{{route('agent-finder')}}">Find Agent</a>
+                                    <a class="dropdown-item" href="{{route('add-agent')}}">Register</a>
                                     
                                 </div>
                             </div>
@@ -163,26 +382,45 @@
                             <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
                             aria-expanded="false" href="#">Agent Finder</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.html">Home Map</a>
-                                
+                                <a class="dropdown-item" href="{{route('listagents')}}">All Agents </a>
+                                <a class="dropdown-item" href="{{route('agent-finder')}}">Find Agent</a>
+                                <a class="dropdown-item" href="{{route('add-agent')}}">Register</a>
                             </div>
                         </li>
                             <!-- STAR COLLAPSE MOBILE MENU -->
                         <li class="hidden-lg-up">
                             <div class="po">
-                                <a data-toggle="collapse" href="#listing" aria-expanded="false">Mortgage</a>
+                                <a data-toggle="collapse" href="#listing" aria-expanded="false"></a>
                             </div>
                             <div class="collapse" id="listing">
                                 <div class="card card-block">
-                                    <a class="dropdown-item" href="properties-full-list.html">Full List</a>
+                                    <a class="dropdown-item" href=""> Lenders</a>
+                                    <a class="dropdown-item" href=""> Rate</a>
+                                    <a class="dropdown-item" href="">Refinance Rate</a>
+                                    <a class="dropdown-item" href="">All  Rate</a>
+
+                                    <a class="dropdown-item" href=""> calculator</a>
+                                    <a class="dropdown-item" href="">Arrordability calculator</a>
+                                    <a class="dropdown-item" href="">Refinance Calculator</a>
+                                    <a class="dropdown-item" href="">Amortization calculator</a>
+                                    <a class="dropdown-item" href="">Debt-to-Income calculator</a>
                                 </div>
                             </div>
                         </li>
                         <li class="dropdown hidden-md-down">
                             <a class="active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-                            aria-expanded="false" href="#">Mortgage</a>
+                            aria-expanded="false" href="#"></a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="index.html">Home Map</a>
+                                <a class="dropdown-item" href=""> Lenders</a>
+                                <a class="dropdown-item" href=""> Rate</a>
+                                <a class="dropdown-item" href="">Refinance Rate</a>
+                                <a class="dropdown-item" href="">All  Rate</a>
+
+                                <a class="dropdown-item" href=""> calculator</a>
+                                <a class="dropdown-item" href="">Arrordability calculator</a>
+                                <a class="dropdown-item" href="">Refinance Calculator</a>
+                                <a class="dropdown-item" href="">Amortization calculator</a>
+                                <a class="dropdown-item" href="">Debt-to-Income calculator</a>
                                 
                             </div>
                         </li>
@@ -226,11 +464,15 @@
                                 <a class="dropdown-item" href="index.html">Home Map</a>
                             </div>
                             
+
                         </li>
+
+                        
 
                         
                     </ul>
                 </nav>
             </div>
         </div>
+        {{-- @include('website.nav') --}}
     </div>

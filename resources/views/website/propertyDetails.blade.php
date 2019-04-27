@@ -278,7 +278,9 @@
                             <div class="property-location mb-5">
                                 <h5>Location</h5>
                                 <div class="divider-fade"></div>
-                                <div id="map-contact" class="contact-map"></div>
+                                <div id="map" style=" margin-top: -50px">    
+                                    
+                                </div>
                             </div>
                         @endforeach
                         <!-- START SECTION ASSIGNED AGENTS -->
@@ -286,234 +288,71 @@
                             <div class="container">
                                 <h5>Assigned Agents</h5>
                                 <div class="row team-all">
-                                    <div class="col-lg-4 col-md-6 team-pro hover-effect">
-                                        <div class="team-wrap">
-                                            <div class="team-img">
-                                                <img src="{{asset('smart/images/team/t-5.jpg')}}" alt="" />
-                                            </div>
-                                            <div class="team-content">
-                                                <div class="team-info">
-                                                    <h3>Andrew Crow</h3>
-                                                    <p>Real Estate Agents</p>
-                                                    <div class="team-socials">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                                            </li>
+                                    @foreach(agentDetails($listData->email) as $seeAgent)
+                                        <div class="col-lg-12 agent-mb">
+                                            <div class="agent agent-row shadow-hover">
+                                                <a href="{{route('see-agent-information', $seeAgent->email)}}" class="agent-img">
+                                                    <div class="img-fade"></div>
+                                                    <div class="button alt agent-tag">{{count($seeProper)}} Properties</div>
+                                                    <img src="{{asset('agent-logo/'.$seeAgent->agent_image)}}" alt="" />
+                                                </a>
+                                                <div class="agent-content">
+                                                    <div class="agent-details">
+                                                        <h4><a href="{{route('see-agent-information', $seeAgent->email)}}">{{$seeAgent->agent_name}}</a></h4>
+                                                        <p><i class="fa fa-tag icon"></i>Selling Agent</p>
+                                                        <p><i class="fa fa-envelope icon"></i>{{$seeAgent->email}}</p>
+                                                        <p><i class="fa fa-phone icon"></i>{{$seeAgent->phone_number}}</p>
+                                                    </div>
+                                                    <div class="agent-text">
+                                                        <p>{{$seeAgent->description}}</p>
+                                                    </div>
+                                                    <div class="agent-footer center">
+                                                        <ul class="netsocials">
+                                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                                         </ul>
                                                     </div>
-                                                    <span><a href="agent-details.html">View Profile</a></span>
                                                 </div>
+                                                <div class="clear"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 team-pro hover-effect">
-                                        <div class="team-wrap">
-                                            <div class="team-img">
-                                                <img src="{{asset('smart/images/team/t-6.jpg')}}" alt="" />
-                                            </div>
-                                            <div class="team-content">
-                                                <div class="team-info">
-                                                    <h3>Marie Tyler</h3>
-                                                    <p>Real Estate Agents</p>
-                                                    <div class="team-socials">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <span><a href="agent-details.html">View Profile</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 team-pro pb-none pb-on hover-effect">
-                                        <div class="team-wrap">
-                                            <div class="team-img">
-                                                <img src="{{asset('smart/images/team/t-7.jpg')}}" alt="" />
-                                            </div>
-                                            <div class="team-content">
-                                                <div class="team-info">
-                                                    <h3>Phillip Smith</h3>
-                                                    <p>Real Estate Agents</p>
-                                                    <div class="team-socials">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <span><a href="agent-details.html">View Profile</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                    
                                 </div>
                             </div>
                         </section>
                         <!-- END SECTION ASSIGNED AGENTS -->
                     </div>
                 @endforeach
-                <aside class="col-lg-3 col-md-12 car">
+                <aside class="col-lg-3 col-md-12 ">
+                        
                     <div class="widget">
-                        <div class="section-heading">
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-home"></i>
-                                </div>
-                                <div class="media-body">
-                                    <h5>Search Properties</h5>
-                                    <div class="border"></div>
-                                    <p>Search your Properties</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Search Fields -->
-                        <div class="main-search-field">
-                            <h5 class="title">Filter</h5>
-                            <form method="GET">
-                                <div class="at-col-default-mar">
-                                    <select>
-                                        <option value="0" selected>Location</option>
-                                        <option value="1">New York</option>
-                                        <option value="2">Los Angeles</option>
-                                        <option value="3">Chicago</option>
-                                        <option value="4">Philadelphia</option>
-                                        <option value="5">San Francisco</option>
-                                    </select>
-                                </div>
-                                <div class="at-col-default-mar">
-                                    <select class="div-toggle" data-target=".my-info-1">
-                                        <option value="0" data-show=".acitveon" selected>Property Status</option>
-                                        <option value="1" data-show=".sale">For Sale</option>
-                                        <option value="2" data-show=".rent">For Rent</option>
-                                        <option value="3" data-show=".rent">Sold</option>
-                                    </select>
-                                </div>
-                                <div class="at-col-default-mar">
-                                    <div class="at-col-default-mar">
-                                        <select>
-                                            <option value="0" selected>Property Type</option>
-                                            <option value="1">Family House</option>
-                                            <option value="2">Apartment</option>
-                                            <option value="3">Condo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="at-col-default-mar">
-                                    <select>
-                                        <option value="0" selected>Beds</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="at-col-default-mar">
-                                    <select>
-                                        <option value="0" selected>Baths</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-12 no-pds">
-                                    <div class="at-col-default-mar">
-                                        <input class="at-input" type="text" name="min-area" placeholder="Squre Fit Min">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 no-pds my-4">
-                                    <div class="at-col-default-mar">
-                                        <input class="at-input" type="text" name="max-area" placeholder="Squre Fit Max">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Price Fields -->
-                        <div class="main-search-field-2">
-                            <div class="range-slider">
-                                <input type="text" disabled class="slider_amount m-t-lg-30 m-t-xs-0 m-t-sm-10">
-                                <div class="slider-range"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 no-pds">
-                            <div class="at-col-default-mar">
-                                <button class="btn btn-default hvr-bounce-to-right" type="submit">Search</button>
-                            </div>
-                        </div>
+                        
+
                         <div class="recent-post py-5">
                             <h5 class="font-weight-bold mb-4">Recent Properties</h5>
-                            <div class="recent-main">
-                                <div class="recent-img">
-                                    <a href="blog-details.html"><img src="{{asset('smart/images/feature-properties/fp-1.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="info-img">
-                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                    <p>$230,000</p>
-                                </div>
-                            </div>
-                            <div class="recent-main my-4">
-                                <div class="recent-img">
-                                    <a href="blog-details.html"><img src="{{asset('smart/images/feature-properties/fp-2.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="info-img">
-                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                    <p>$230,000</p>
-                                </div>
-                            </div>
-                            <div class="recent-main">
-                                <div class="recent-img">
-                                    <a href="blog-details.html"><img src="{{asset('smart/images/feature-properties/fp-3.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="info-img">
-                                    <a href="blog-details.html"><h6>Family Home</h6></a>
-                                    <p>$230,000</p>
-                                </div>
-                            </div>
+                            @foreach($prop as $koll)
+                                @foreach(propertyQuantity($koll->identity) as $seeQua)
+                                    @foreach(propertyImage($koll->identity) as $photo)
+                                        <div class="recent-main" style="margin-bottom: 10px">
+                                            <div class="recent-img">
+                                                <a href="{{route('see-property-details', $koll->identity)}}">
+                                                    <img src="{{asset('storage/images/'.$photo->cover_picture)}}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="info-img">
+                                                <a href="{{route('see-property-details', $koll->identity)}}"><h6>{{$koll->category}}</h6></a>
+                                                <p>&#8358;{{number_format($seeQua->price)}}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endforeach
+                            @endforeach
+                            
                         </div>
-                        <div class="recent-post">
-                            <h5 class="font-weight-bold mb-4">Popolar Tags</h5>
-                            <div class="tags">
-                                <span><a href="#" class="btn btn-outline-primary">Houses</a></span>
-                                <span><a href="#" class="btn btn-outline-primary">Real Home</a></span>
-                            </div>
-                            <div class="tags">
-                                <span><a href="#" class="btn btn-outline-primary">Baths</a></span>
-                                <span><a href="#" class="btn btn-outline-primary">Beds</a></span>
-                            </div>
-                            <div class="tags">
-                                <span><a href="#" class="btn btn-outline-primary">Garages</a></span>
-                                <span><a href="#" class="btn btn-outline-primary">Family</a></span>
-                            </div>
-                            <div class="tags">
-                                <span><a href="#" class="btn btn-outline-primary">Real Estates</a></span>
-                                <span><a href="#" class="btn btn-outline-primary">Properties</a></span>
-                            </div>
-                            <div class="tags no-mb">
-                                <span><a href="#" class="btn btn-outline-primary">Location</a></span>
-                                <span><a href="#" class="btn btn-outline-primary">Price</a></span>
-                            </div>
-                        </div>
+                        
                     </div>
                 </aside>
             </div>
@@ -523,6 +362,6 @@
     <script src="{{asset('smart/js/leaflet-gesture-handling.min.js')}}"></script>
     <script src="{{asset('smart/js/leaflet-providers.js')}}"></script>
     <script src="{{asset('smart/js/leaflet.markercluster.js')}}"></script>
-    <script src="{{asset('smart/js/map-single.js')}}"></script>
+    {{-- <script src="{{asset('smart/js/map-single.js')}}"></script> --}}
     <!-- END SECTION AGENTS -->
     @endsection

@@ -34,7 +34,7 @@
                     </div> --}}
                     <!-- Block heading end -->
                     <div class="row">
-                         @foreach($prop as $listData)
+                        @foreach($prop as $listData)
                             @foreach(propertyImage($listData->identity) as $photo)
                                 <div class="item col-lg-6 col-md-6 col-xs-12 landscapes sale">
                                     <div class="project-single">

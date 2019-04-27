@@ -14,8 +14,10 @@ class PageController extends Controller
     public function index()
     {
         $data = DB::table('properties')->orderBy('id', 'desc')->paginate(3);
+        $agent = DB::table('agents')->orderBy('agent_id', 'desc')->paginate(4);
         return view("website.index")->with([
-            'data' => $data
+            'data' => $data,
+            'agent' => $agent,
         ]);
     }
 
@@ -29,19 +31,31 @@ class PageController extends Controller
 
     public function propertyDetails($identity)
     {
-        $seeProper =DB::table('properties')->where(["identity" => $identity ])->get();   
-        return view("website.propertyDetails")->with('seeProper', $seeProper);
+        $seeProper =DB::table('properties')->where(["identity" => $identity ])->get();
+        //$info =DB::table('agents')->where(["email" => $seeProper->email ])->get();   
+        $prop =DB::table('properties')->get();  
+        return view("website.propertyDetails")->with([
+            'seeProper' => $seeProper,
+            'prop' => $prop,
+            //'info' => $info,
+        ]);
     }
 
     public function agentProperties($email)
     {
         $seePro =DB::table('properties')->where(["email" => $email])->paginate(10);
-        return view("website.agentProperties")->with('seePro', $seePro);
+        $agent = DB::table('agents')->orderBy('agent_id', 'desc')->paginate(12);
+        return view("website.agentProperties")->with([
+            'seePro'=> $seePro,
+            'agent' => $agent
+        ]);
+        
+        
     }
 
     public function ouragents()
     {
-        $agent = DB::table('agents')->paginate(15);
+        $agent = DB::table('agents')->paginate(16);
         return view('website.allAgents')->with ([
             'agent' => $agent
         ]);
@@ -52,6 +66,14 @@ class PageController extends Controller
         $agentDetails = DB::table('agents')->paginate(15);
         return view('website.agentDetails')->with ([
             'agentDetails' => $agentDetails
+        ]);
+    }
+
+     public function agentFinder()
+    {
+        $agent = DB::table('agents')->orderBy('agent_id', 'desc')->paginate(4);
+        return view('website.agentFinder')->with([
+            'agent' => $agent,
         ]);
     }
 
