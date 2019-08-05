@@ -23,7 +23,7 @@
 						@include('message');
 						<div class="form-group">
                             <label>State</label>
-                            <select id="theStates" name="state" onchange="useSelectedItem(this)" class="form-control" 
+                            <select id="theStates" name="state" style="height:50px" onchange="useSelectedItem(this)" class="form-control" 
                             required >
                                 <option value="">Select State</option>
                                 <option value="Abia">Abia</option>
@@ -74,7 +74,7 @@
 						</div>
 						<div class="form-group" >
                             <label>Local Government </label>
-							<select id="locaGv" name="lga"  class="form-control" required >
+							<select id="locaGv" style="color:black; width:650px;; margin-left:-3px;" name="lga"  class="form-control" required >
                                     
                             </select>
                             

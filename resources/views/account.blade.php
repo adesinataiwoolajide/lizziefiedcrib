@@ -856,19 +856,19 @@
 
             var listP = document.getElementsByClassName('propertyForm')[0];
             listP.onsubmit = function(){
-            	 event.preventDefault();
-            	 var listP = document.getElementsByClassName('propertyForm')[0];
-                 var formData = new FormData(listP);
-                 var theOwner = document.getElementById('gottenValue').innerHTML;
-                         formData.append('email', theOwner);
-                         codeAddress(function(param){
-                             console.log(param.geometry.location.lat());
-                             console.log(param.geometry.location.lng)
-                             formData.append('longitude', param.geometry.location.lng());
-                             formData.append('latitude', param.geometry.location.lat());
-                             formData.append('propIdentity', param.place_id);
-                             submitData(formData);
-                         });
+            	event.preventDefault();
+            	var listP = document.getElementsByClassName('propertyForm')[0];
+                  var formData = new FormData(listP);
+                  var theOwner = document.getElementById('gottenValue').innerHTML;
+                  formData.append('email', theOwner);
+                  codeAddress(function(param){
+                        console.log(param.geometry.location.lat());
+                        console.log(param.geometry.location.lng)
+                        formData.append('longitude', param.geometry.location.lng());
+                        formData.append('latitude', param.geometry.location.lat());
+                        formData.append('propIdentity', param.place_id);
+                        submitData(formData);
+                  });
             }
 
              function addContact(param){

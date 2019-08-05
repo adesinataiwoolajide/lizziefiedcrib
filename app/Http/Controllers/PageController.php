@@ -11,6 +11,20 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function comingSoon()
+    {
+        return view("website.coming_soon");
+    }
+
+    public function comingSoonProp()
+    {
+        return view("website.homes.coming_soon_prop");
+    }
+
+    public function underconstruction()
+    {
+        return view("website.under_construction");
+    }
     public function index()
     {
         $data = DB::table('properties')->orderBy('id', 'desc')->paginate(3);
@@ -76,6 +90,90 @@ class PageController extends Controller
             'agent' => $agent,
         ]);
     }
+
+    public function sellProperties()
+    {
+        $forsale =DB::table('properties')->where(["category" => 'For Sell'])->paginate(12);
+        return view("website.homes.forsale")->with([
+            'forsale'=> $forsale,
+        ]);
+          
+    }
+
+    public function rentProperties()
+    {
+        $forsale =DB::table('properties')->where(["category" => 'For Lease'])->paginate(12);
+        return view("website.homes.renthomes")->with([
+            'forsale'=> $forsale,
+        ]);
+          
+    }
+
+    public function ownerProperties()
+    {
+        $forsale =DB::table('properties')->paginate(12);
+        return view("website.homes.fsbo")->with([
+            'forsale'=> $forsale,
+        ]);
+          
+    }
+
+    public function newProperties()
+    {
+        $forsale =DB::table('properties')->where('title', 'House')->orderBy('id', 'desc')->paginate(12);
+        return view("website.homes.newhome")->with([
+            'forsale'=> $forsale,
+        ]);
+          
+    }
+
+    public function buyeragents()
+    {
+        $agent = DB::table('agents')->where('category', 'Buyer')->orderBy('agent_id', 'desc')->paginate(16);
+        return view('website.homes.buyeragent')->with ([
+            'agent' => $agent
+        ]);
+    }
+
+    public function sellingagents()
+    {
+        $agent = DB::table('agents')->where('category', 'Seller')->orderBy('agent_id', 'desc')->paginate(16);
+        return view('website.selling-agent')->with ([
+            'agent' => $agent
+        ]);
+    }
+
+    public function estateagents()
+    {
+        $agent = DB::table('agents')->where('category', 'Real Estate')->orderBy('agent_id', 'desc')->paginate(16);
+        return view('website.real-estate-agent')->with ([
+            'agent' => $agent
+        ]);
+    }
+
+
+    public function manageragents()
+    {
+        $agent = DB::table('agents')->where('category', 'Estate Manager')->orderBy('agent_id', 'desc')->paginate(16);
+        return view('website.real-estate-manager')->with ([
+            'agent' => $agent
+        ]);
+    }
+
+    public function builderagents()
+    {
+        $agent = DB::table('agents')->where('category', 'Builder')->orderBy('agent_id', 'desc')->paginate(16);
+        return view('website.builder')->with ([
+            'agent' => $agent
+        ]);
+    }
+
+    public function mortgagecalculator()
+    { 
+        return view('website.mortgage-calculator');
+    }
+
+    
 
     /**
      * Show the form for creating a new resource.
